@@ -1,0 +1,153 @@
+  <div id="scroll-progress-bar" style="position:fixed;top:0;left:0;height:4px;width:0;background:#00c3ad;z-index:300;transition:width 0.2s;"></div>
+  <div id="offer-nudge" style="display:none;position:fixed;bottom:90px;left:50%;transform:translateX(-50%);background:#00c3ad;color:#fff;padding:1em 2em;border-radius:24px;box-shadow:0 4px 18px rgba(0,195,173,0.13);font-size:1.08rem;font-weight:700;z-index:300;animation:fadein-nudge 0.7s;"><span>🎉</span> Vous êtes éligible à l'offre du jour !</div>
+  <div class="live-counter-bar">
+    <span id="live-counter"></span> personnes consultent cette offre maintenant
+  </div>
+  <!-- Floating Trust Badge -->
+  <div class="trust-badge">
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;margin-right:6px;"><circle cx="11" cy="11" r="11" fill="#00c3ad"/><path d="M7.5 11.5L10 14L15 9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Paiement à la livraison garanti
+  </div>
+  <!-- Sticky Order Bar (Mobile) -->
+  <div class="sticky-order-bar">
+    <button class="sticky-order-btn" onclick="window.scrollTo({top: document.querySelector('.cod-form').getBoundingClientRect().top + window.scrollY - 20, behavior: 'smooth'});">Commander</button>
+    <a href="https://wa.me/212600000000?text=Bonjour%2C%20je%20veux%20commander%20les%20Smart-Glasses%20!" target="_blank" rel="noopener" class="sticky-wa-btn" aria-label="WhatsApp">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" /> WhatsApp
+    </a>
+  </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Glasses Morocco</title>
+  <meta name="description" content="Découvrez les lunettes intelligentes au Maroc. Commandez maintenant avec paiement à la livraison !">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Hero Section with COD Form -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1><span class="highlight">Nouveau</span> : Smart-Glasses au Maroc</h1>
+      <p>Protégez vos yeux, boostez votre style et profitez de la technologie. <b>Livraison rapide partout au Maroc, paiement à la livraison !</b></p>
+        <div class="promo-badge">-30% Promo Été</div>
+        <div class="price-box" style="margin:0.7em 0 0.5em 0;text-align:center;">
+          <span style="font-size:1.5em;font-weight:700;color:#00c3ad;">249 Dh</span>
+          <span style="font-size:1.1em;color:#888;text-decoration:line-through;margin-left:0.7em;">399 Dh</span>
+        </div>
+      <form class="cod-form">
+        <label for="variant">Choisissez votre modèle :</label>
+        <div class="variant-toggle">
+          <input type="radio" id="sunglasses" name="variant" value="sunglasses" checked>
+          <label for="sunglasses">Sunglasses</label>
+          <input type="radio" id="anti-blue" name="variant" value="anti-blue">
+          <label for="anti-blue">Anti-Blue</label>
+        </div>
+        <div class="variant-images">
+          <div id="grid-sunglasses" class="variant-grid fade-in" style="display:grid;grid-template-columns:1fr 1fr;gap:0.5em;max-width:240px;margin:0 auto 0.7em auto;">
+            <img src="images/Sunglasses/s-l1600.webp" alt="Sunglasses 1" style="width:100%;border-radius:10px;">
+            <img src="images/Sunglasses/s-l1600 (1).webp" alt="Sunglasses 2" style="width:100%;border-radius:10px;">
+            <img src="images/Sunglasses/s-l1600 (2).webp" alt="Sunglasses 3" style="width:100%;border-radius:10px;">
+            <img src="images/Sunglasses/s-l1600 (3).webp" alt="Sunglasses 4" style="width:100%;border-radius:10px;">
+          </div>
+          <div id="grid-anti-blue" class="variant-grid fade-in" style="display:none;grid-template-columns:1fr 1fr;gap:0.5em;max-width:240px;margin:0 auto 0.7em auto;">
+            <img src="images/Anti-Blue/81894808-0b55-4c26-b363-1223be921386.webp" alt="Anti-blue 1" style="width:100%;border-radius:10px;">
+            <img src="images/Anti-Blue/9157749d-4ea9-4245-9e98-acac79dc96d1.webp" alt="Anti-blue 2" style="width:100%;border-radius:10px;">
+            <img src="images/Anti-Blue/b8b53393-2fbc-4554-b582-c8c83edfb780.webp" alt="Anti-blue 3" style="width:100%;border-radius:10px;">
+            <img src="images/Anti-Blue/e987bee7-43d8-4980-9382-42a85c85de72.webp" alt="Anti-blue 4" style="width:100%;border-radius:10px;">
+          </div>
+        </div>
+        <input type="text" name="name" placeholder="Votre nom" required>
+        <input type="tel" name="phone" placeholder="Votre téléphone" required pattern="[0-9]{10}">
+        <input type="text" name="address" placeholder="Ville" required>
+        <button type="submit">Commander</button>
+        <button class="scroll-to-reviews" type="button" onclick="document.getElementById('reviews').scrollIntoView({behavior: 'smooth'});">Voir les avis clients ↓</button>
+        <div class="secure-order"><span>✔</span> Commande 100% sécurisée</div>
+      </form>
+    </div>
+    <img src="assets/smart-glasses-hero.svg" alt="Smart Glasses" class="hero-img">
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <h2><span class="highlight">Pourquoi choisir</span> nos Smart-Glasses ?</h2>
+    <div class="features-list">
+      <div class="feature">
+        <img src="assets/feature1.svg" alt="Bluetooth">
+        <p>Bluetooth 5.0</p>
+      </div>
+      <div class="feature">
+        <img src="assets/feature2.svg" alt="Water Resistant">
+        <p>Résistant à l'eau</p>
+      </div>
+      <div class="feature">
+        <img src="assets/feature3.svg" alt="Appels">
+        <p>Appels mains libres</p>
+      </div>
+      <div class="feature">
+        <img src="assets/feature4.svg" alt="Assistant Vocal">
+        <p>Assistant vocal</p>
+      </div>
+      <div class="feature">
+        <img src="assets/feature1.svg" alt="Écouter de la musique">
+        <p>Écouter de la musique</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section class="reviews" id="reviews">
+    <h2><span class="highlight">Avis</span> de nos clients</h2>
+    <div class="review-list">
+      <div class="review">
+        <p>"Livraison rapide, lunettes très confortables !"</p>
+        <span>- Yassine, Casablanca <img src="https://flagcdn.com/16x12/ma.png" alt="MA"></span>
+      </div>
+      <div class="review">
+        <p>"J'adore le style et la protection contre la lumière bleue."</p>
+        <span>- Salma, Rabat <img src="https://flagcdn.com/16x12/ma.png" alt="MA"></span>
+      </div>
+      <div class="review">
+        <p>"Service client au top, je recommande !"</p>
+        <span>- Imane, Marrakech <img src="https://flagcdn.com/16x12/ma.png" alt="MA"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq">
+    <h2><span class="highlight">Questions</span> fréquentes</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" type="button">Comment passer commande ?</button>
+        <div class="faq-answer">Remplissez le formulaire en haut de la page et nous vous contacterons pour confirmer votre commande.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" type="button">Quels sont les délais de livraison ?</button>
+        <div class="faq-answer">Livraison en 2 à 5 jours ouvrables partout au Maroc.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" type="button">Puis-je payer à la livraison ?</button>
+        <div class="faq-answer">Oui, le paiement se fait à la livraison (COD).</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="privacy.html" rel="nofollow">Politique de confidentialité</a> |
+      <a href="conditions.html" rel="nofollow">Conditions</a> |
+      <a href="contact.html" rel="nofollow">Contact</a>
+    </div>
+    <p>&copy; 2025 Smart Glasses Maroc. Tous droits réservés.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
