@@ -1,4 +1,4 @@
-<div id="scroll-progress-bar" style="position:fixed;top:0;left:0;height:4px;width:0;background:#00c3ad;z-index:300;transition:width 0.2s;"></div>
+  <div id="scroll-progress-bar" style="position:fixed;top:0;left:0;height:4px;width:0;background:#00c3ad;z-index:300;transition:width 0.2s;"></div>
   <div id="offer-nudge" style="display:none;position:fixed;bottom:90px;left:50%;transform:translateX(-50%);background:#00c3ad;color:#fff;padding:1em 2em;border-radius:24px;box-shadow:0 4px 18px rgba(0,195,173,0.13);font-size:1.08rem;font-weight:700;z-index:300;animation:fadein-nudge 0.7s;"><span>🎉</span> Vous êtes éligible à l'offre du jour !</div>
   <div class="live-counter-bar">
     <span id="live-counter"></span> personnes consultent cette offre maintenant
@@ -28,7 +28,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 </head>
 <body>
   <!-- Hero Section with COD Form -->
@@ -39,7 +38,7 @@
         <div class="promo-badge">-30% Promo Été</div>
         <div class="price-box" style="margin:0.7em 0 0.5em 0;text-align:center;">
           <span style="font-size:1.5em;font-weight:700;color:#00c3ad;">249 Dh</span>
-          <span class="compare-at" style="font-size:1.1em;text-decoration:line-through;margin-left:0.7em;">399 Dh</span>
+          <span style="font-size:1.1em;color:#888;text-decoration:line-through;margin-left:0.7em;">399 Dh</span>
         </div>
       <form class="cod-form">
         <label for="variant">Choisissez votre modèle :</label>
@@ -51,16 +50,16 @@
         </div>
         <div class="variant-images">
           <div id="grid-sunglasses" class="variant-grid fade-in" style="display:grid;grid-template-columns:1fr 1fr;gap:0.5em;max-width:240px;margin:0 auto 0.7em auto;">
-            <img src="images/Sunglasses/s-l1600.webp" alt="Sunglasses 1" style="width:100%;border-radius:10px;" width="240" height="240">
-            <img src="images/Sunglasses/s-l1600 (1).webp" alt="Sunglasses 2" style="width:100%;border-radius:10px;" width="240" height="240">
-            <img src="images/Sunglasses/s-l1600 (2).webp" alt="Sunglasses 3" style="width:100%;border-radius:10px;" width="240" height="240">
-            <img src="images/Sunglasses/s-l1600 (3).webp" alt="Sunglasses 4" style="width:100%;border-radius:10px;" width="240" height="240">
+            <img src="images/Sunglasses/s-l1600.webp" alt="Sunglasses 1" style="width:100%;border-radius:10px;">
+            <img src="images/Sunglasses/s-l1600 (1).webp" alt="Sunglasses 2" style="width:100%;border-radius:10px;">
+            <img src="images/Sunglasses/s-l1600 (2).webp" alt="Sunglasses 3" style="width:100%;border-radius:10px;">
+            <img src="images/Sunglasses/s-l1600 (3).webp" alt="Sunglasses 4" style="width:100%;border-radius:10px;">
           </div>
           <div id="grid-anti-blue" class="variant-grid fade-in" style="display:none;grid-template-columns:1fr 1fr;gap:0.5em;max-width:240px;margin:0 auto 0.7em auto;">
-            <img src="images/Anti-Blue/81894808-0b55-4c26-b363-1223be921386.webp" alt="Anti-blue 1" style="width:100%;border-radius:10px;" width="240" height="240">
-            <img src="images/Anti-Blue/9157749d-4ea9-4245-9e98-acac79dc96d1.webp" alt="Anti-blue 2" style="width:100%;border-radius:10px;" width="240" height="240">
-            <img src="images/Anti-Blue/b8b53393-2fbc-4554-b582-c8c83edfb780.webp" alt="Anti-blue 3" style="width:100%;border-radius:10px;" width="240" height="240">
-            <img src="images/Anti-Blue/e987bee7-43d8-4980-9382-42a85c85de72.webp" alt="Anti-blue 4" style="width:100%;border-radius:10px;" width="240" height="240">
+            <img src="images/Anti-Blue/81894808-0b55-4c26-b363-1223be921386.webp" alt="Anti-blue 1" style="width:100%;border-radius:10px;">
+            <img src="images/Anti-Blue/9157749d-4ea9-4245-9e98-acac79dc96d1.webp" alt="Anti-blue 2" style="width:100%;border-radius:10px;">
+            <img src="images/Anti-Blue/b8b53393-2fbc-4554-b582-c8c83edfb780.webp" alt="Anti-blue 3" style="width:100%;border-radius:10px;">
+            <img src="images/Anti-Blue/e987bee7-43d8-4980-9382-42a85c85de72.webp" alt="Anti-blue 4" style="width:100%;border-radius:10px;">
           </div>
         </div>
         <input type="text" name="name" placeholder="Votre nom" required>
@@ -71,9 +70,7 @@
         <div class="secure-order"><span>✔</span> Commande 100% sécurisée</div>
       </form>
     </div>
-    <div class="hero-img-container">
-      <img src="images/HERO.webp" alt="Smart Glasses" class="hero-img" width="420" height="420">
-    </div>
+    <img src="assets/smart-glasses-hero.svg" alt="Smart Glasses" class="hero-img">
   </section>
 
   <!-- Features Section -->
@@ -81,23 +78,23 @@
     <h2><span class="highlight">Pourquoi choisir</span> nos Smart-Glasses ?</h2>
     <div class="features-list">
       <div class="feature">
-        <dotlottie-player src="https://lottie.host/11b1745b-4011-4ef6-b10a-bc5846596295/7RgagzhBr5.lottie" background="transparent" speed="1" style="width:100px;height:100px;" loop autoplay aria-label="Bluetooth animé"></dotlottie-player>
+        <img src="assets/feature1.svg" alt="Bluetooth">
         <p>Bluetooth 5.0</p>
       </div>
       <div class="feature">
-        <dotlottie-player src="https://lottie.host/8d3800e3-9f9c-4d9e-b1c2-4837eadd45e3/6BNNxvw9dk.lottie" background="transparent" speed="1" style="width:100px;height:100px;" loop autoplay aria-label="Résistant à l'eau animé"></dotlottie-player>
+        <img src="assets/feature2.svg" alt="Water Resistant">
         <p>Résistant à l'eau</p>
       </div>
       <div class="feature">
-        <dotlottie-player src="https://lottie.host/d887c98f-43d9-4046-a0bf-a2d0b3e74c6f/C0e2G8TWuX.lottie" background="transparent" speed="1" style="width:100px;height:100px;" loop autoplay aria-label="Appels mains libres animé"></dotlottie-player>
+        <img src="assets/feature3.svg" alt="Appels">
         <p>Appels mains libres</p>
       </div>
       <div class="feature">
-        <dotlottie-player src="https://lottie.host/2cac027b-16bb-4554-bb7f-dcb964977af5/lZN1xta03S.lottie" background="transparent" speed="1" style="width:100px;height:100px;" loop autoplay aria-label="Assistant vocal animé"></dotlottie-player>
+        <img src="assets/feature4.svg" alt="Assistant Vocal">
         <p>Assistant vocal</p>
       </div>
       <div class="feature">
-        <dotlottie-player src="https://lottie.host/ca813122-3953-4bfe-bef4-13f96781a8bd/GL0V38VUvY.lottie" background="transparent" speed="1" style="width:100px;height:100px;" loop autoplay aria-label="Écouter de la musique animé"></dotlottie-player>
+        <img src="assets/feature1.svg" alt="Écouter de la musique">
         <p>Écouter de la musique</p>
       </div>
     </div>
@@ -109,15 +106,15 @@
     <div class="review-list">
       <div class="review">
         <p>"Livraison rapide, lunettes très confortables !"</p>
-        <span>- Yassine, Casablanca <img src="https://flagcdn.com/16x12/ma.png" alt="MA" width="16" height="12"></span>
+        <span>- Yassine, Casablanca <img src="https://flagcdn.com/16x12/ma.png" alt="MA"></span>
       </div>
       <div class="review">
         <p>"J'adore le style et la protection contre la lumière bleue."</p>
-        <span>- Salma, Rabat <img src="https://flagcdn.com/16x12/ma.png" alt="MA" width="16" height="12"></span>
+        <span>- Salma, Rabat <img src="https://flagcdn.com/16x12/ma.png" alt="MA"></span>
       </div>
       <div class="review">
         <p>"Service client au top, je recommande !"</p>
-        <span>- Imane, Marrakech <img src="https://flagcdn.com/16x12/ma.png" alt="MA" width="16" height="12"></span>
+        <span>- Imane, Marrakech <img src="https://flagcdn.com/16x12/ma.png" alt="MA"></span>
       </div>
     </div>
   </section>

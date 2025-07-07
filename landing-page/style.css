@@ -35,11 +35,6 @@
   z-index: 200;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   letter-spacing: 0.01em;
-  min-height: 32px;
-}
-/* Reserve space for offer nudge to avoid layout shift */
-#offer-nudge {
-  min-height: 56px;
 }
 /* Floating Trust Badge */
 .trust-badge {
@@ -106,7 +101,6 @@
   font-size: 0.98rem;
   color: #222;
   transition: max-height 0.3s ease, padding 0.3s;
-  min-height: 32px;
 }
 .faq-item.open .faq-answer {
   max-height: 120px;
@@ -128,7 +122,6 @@
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
   gap: 1em;
-  min-height: 64px;
 }
 .sticky-order-btn {
   background: #00c3ad;
@@ -316,16 +309,9 @@ body {
 }
 .cod-form select, .cod-form input {
   padding: 0.7rem;
-  border: 2px solid #00c3ad;
+  border: 1px solid #ddd;
   border-radius: 7px;
   font-size: 1rem;
-  background: #fff;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-.cod-form select:focus, .cod-form input:focus {
-  border-color: #00897b;
-  box-shadow: 0 0 0 2px #e6fcf8;
-  outline: none;
 }
 .cod-form button {
   background: #00c3ad;
@@ -341,30 +327,12 @@ body {
 .cod-form button:hover {
   background: #009e8e;
 }
-.hero-img-container {
-  aspect-ratio: 1 / 1;
-  width: 100%;
-  max-width: 420px;
-  margin: 1.5rem auto 0 auto;
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 6px 32px rgba(0,195,173,0.10);
-  background: #f2f2f2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .hero-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 0;
+  width: 92%;
+  max-width: 340px;
+  margin: 1.5rem auto 0 auto;
   display: block;
-}
-@media (min-width: 900px) {
-  .hero-img-container {
-    margin: 0 0 0 0;
-  }
+  z-index: 1;
 }
 .features {
   background: #fff;
@@ -416,7 +384,6 @@ body {
   padding: 1rem 1.2rem;
   max-width: 320px;
   box-shadow: 0 1px 6px rgba(0,0,0,0.04);
-  min-height: 110px;
 }
 .review span {
   display: flex;
@@ -475,140 +442,31 @@ footer {
 .footer-links a:hover {
   opacity: 1;
 }
-/* Accessibility contrast improvements */
-.price-box span[style*="text-decoration:line-through"],
-.price-box .compare-at {
-  color: #444 !important;
-}
-.faq-question {
-  color: #00897b;
-}
-.feature p {
-  color: #00897b;
-}
-@media (min-width: 900px) {
-  body {
-    font-size: 1.08rem;
-  }
+@media (min-width: 600px) {
   .hero {
     flex-direction: row;
     justify-content: center;
-    align-items: flex-start;
     text-align: left;
-    min-height: 520px;
-    max-width: 1200px;
-    margin: 0 auto 2.5rem auto;
-    padding: 3.5rem 2rem 2.5rem 2rem;
-    gap: 3.5rem;
+    min-height: 420px;
   }
   .hero-content {
-    max-width: 440px;
-    margin-right: 0;
-    margin-left: 0;
-    box-shadow: 0 6px 32px rgba(0,195,173,0.10);
-    padding: 2.7rem 2.2rem 2.2rem 2.2rem;
+    max-width: 420px;
+    margin-right: 2rem;
   }
   .hero-img {
-    max-width: 420px;
-    margin: 0 0 0 0;
-    box-shadow: 0 6px 32px rgba(0,195,173,0.10);
-    border-radius: 18px;
-  }
-  .variant-grid {
-    max-width: 320px !important;
-    gap: 1em !important;
-  }
-  .features {
-    max-width: 1200px;
-    margin: 0 auto 2.5rem auto;
-    padding: 3rem 2rem 2rem 2rem;
+    margin: 0;
   }
   .features-list {
     flex-wrap: nowrap;
-    gap: 2.2rem;
-    justify-content: space-between;
-  }
-  .feature {
-    width: 180px;
-    padding: 1.5rem 1rem;
-    transition: transform 0.18s, box-shadow 0.18s;
-  }
-  .feature:hover {
-    transform: translateY(-8px) scale(1.04);
-    box-shadow: 0 4px 24px rgba(0,195,173,0.13);
-  }
-  .reviews {
-    max-width: 1200px;
-    margin: 0 auto 2.5rem auto;
-    padding: 3rem 2rem 2rem 2rem;
   }
   .review-list {
     flex-direction: row;
-    gap: 2.2rem;
-    justify-content: center;
-  }
-  .review {
-    max-width: 340px;
-    min-width: 260px;
-    transition: transform 0.18s, box-shadow 0.18s;
-  }
-  .review:hover {
-    transform: translateY(-8px) scale(1.04);
-    box-shadow: 0 4px 24px rgba(0,195,173,0.13);
-  }
-  .faq {
-    max-width: 1200px;
-    margin: 0 auto 2.5rem auto;
-    padding: 3rem 2rem 2rem 2rem;
   }
   .faq-list {
     flex-direction: row;
-    gap: 2.2rem;
-    justify-content: center;
   }
-  .faq-item {
-    max-width: 340px;
-    min-width: 260px;
-    transition: transform 0.18s, box-shadow 0.18s;
-  }
-  .faq-item:hover {
-    transform: translateY(-8px) scale(1.04);
-    box-shadow: 0 4px 24px rgba(0,195,173,0.13);
-  }
-  footer {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2.2rem 0 3.5rem 0;
-    font-size: 1.08rem;
-  }
-  .footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 2.2em;
-    margin-bottom: 1.2rem;
-  }
-  .footer-links a {
-    font-size: 1.08em;
-    opacity: 0.92;
-  }
-  .footer-links a:hover {
-    opacity: 1;
-    text-decoration: underline wavy #fff 2px;
-  }
-  .trust-badge {
-    left: 48px;
-    bottom: 48px;
+  .promo-badge {
     font-size: 1.13rem;
-    padding: 0.7em 1.5em;
-    border-radius: 16px;
-    box-shadow: 0 4px 24px rgba(0,195,173,0.13);
+    margin-top: 2.2rem;
   }
-}
-.variant-grid img {
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  background: #f2f2f2;
 }
