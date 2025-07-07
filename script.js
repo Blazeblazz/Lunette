@@ -42,10 +42,13 @@ const stock = {
 function updateStockDisplay() {
   const variant = sunglassesRadio && sunglassesRadio.checked ? 'sunglasses' : 'anti-blue';
   let stockText = '';
+  let urgent = false;
   if (variant === 'sunglasses') {
     stockText = `Stock restant : <b>${stock['sunglasses']}</b> paires`;
+    urgent = stock['sunglasses'] <= 5;
   } else {
     stockText = `Stock restant : <b>${stock['anti-blue']}</b> paires`;
+    urgent = stock['anti-blue'] <= 5;
   }
   let stockEl = document.getElementById('stock-indicator');
   if (!stockEl) {
@@ -55,7 +58,17 @@ function updateStockDisplay() {
     const form = document.querySelector('.cod-form');
     form.insertBefore(stockEl, form.querySelector('input'));
   }
-  stockEl.innerHTML = stockText;
+  stockEl.innerHTML = stockText + (urgent ? ' <span class="stock-badge">Rupture imminente</span>' : '');
+  // Micro-message sous le bouton Commander
+  let microMsg = document.getElementById('stock-micro-msg');
+  if (!microMsg) {
+    microMsg = document.createElement('div');
+    microMsg.id = 'stock-micro-msg';
+    microMsg.style.cssText = 'color:#d32f2f;font-size:0.98em;font-weight:600;text-align:center;margin-top:0.3em;';
+    const btn = document.querySelector('.cod-form button[type="submit"]');
+    btn.parentNode.insertBefore(microMsg, btn.nextSibling);
+  }
+  microMsg.innerHTML = urgent ? `Plus que <b>${variant === 'sunglasses' ? stock['sunglasses'] : stock['anti-blue']}</b> paires en stock !` : '';
 }
 if (sunglassesRadio && antiBlueRadio) {
   sunglassesRadio.addEventListener('change', updateStockDisplay);
