@@ -78,8 +78,12 @@
       </form>
     </div>
 
+
     <div class="hero-img-container">
       <img src="images/HERO.webp" alt="Lunettes Intelligentes" class="hero-img" width="420" height="420" loading="lazy">
+    </div>
+    <div class="hero-img-container">
+      <img src="images/2.webp" alt="Lunettes Intelligentes - Vue 2" class="hero-img" width="420" height="420" loading="lazy">
     </div>
 
     <div class="about-compare-container" style="margin-top:1.5em;">
@@ -132,6 +136,9 @@
       </div>
     </div>
   </section>
+  <div class="video-banner" style="width:100%;margin:2em 0;text-align:center;">
+    <video src="images/Lunette.mp4" autoplay loop muted playsinline style="max-width:100%;border-radius:18px;box-shadow:0 4px 24px #0001;" aria-label="Vidéo démonstration lunettes intelligentes"></video>
+  </div>
   <!-- À propos du produit -->
   <section class="about-product">
     <div class="about-progress-bar-container">
@@ -182,28 +189,7 @@ function toggleAboutDetail(el) {
   }
 }
 </script>
-    <div class="about-compare-container">
-      <h3 class="about-compare-title">Comparatif rapide</h3>
-      <table class="about-compare-table">
-        <thead>
-          <tr>
-            <th></th>
-            <th>Lunettes Intelligentes</th>
-            <th>Lunettes classiques</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Bluetooth 5.0</td><td class="yes">✔</td><td class="no">✖</td></tr>
-          <tr><td>Appels mains libres</td><td class="yes">✔</td><td class="no">✖</td></tr>
-          <tr><td>Protection anti-lumière bleue</td><td class="yes">✔</td><td class="no">✖</td></tr>
-          <tr><td>Protection solaire UV400</td><td class="yes">✔</td><td class="no">✖</td></tr>
-          <tr><td>Écoute de musique</td><td class="yes">✔</td><td class="no">✖</td></tr>
-          <tr><td>Assistant vocal</td><td class="yes">✔</td><td class="no">✖</td></tr>
-          <tr><td>Prise de photos à distance</td><td class="yes">✔</td><td class="no">✖</td></tr>
-          <tr><td>Style moderne</td><td class="yes">✔</td><td class="no">✔</td></tr>
-        </tbody>
-      </table>
-    </div>
+    <!-- Comparison table removed: now only under hero image -->
     <a id="table-commandes"></a>
     <div style="overflow-x:auto;margin-top:1.7em;">
       <table class="commandes-table">
@@ -231,19 +217,34 @@ function toggleAboutDetail(el) {
   </section>
 
   <!-- Reviews Section -->
+  <div class="review-image-banner" style="text-align:center;margin-bottom:1.5em;">
+    <img src="images/model.webp" alt="Client portant les lunettes" style="max-width:100%;height:auto;border-radius:16px;box-shadow:0 4px 24px #0001;">
+  </div>
   <section class="reviews" id="reviews">
     <h2><span class="highlight">Avis</span> de nos clients</h2>
     <div class="review-list">
       <div class="review">
-        <p>« Livraison rapide, lunettes très confortables ! »</p>
+        <div class="review-header">
+          <span class="star-rating">★★★★★</span>
+          <span class="verified-badge" title="Acheteur vérifié">✔️ Acheteur vérifié</span>
+        </div>
+        <p><b>Livraison rapide</b>, lunettes très confortables !</p>
         <span>- Yassine, Casablanca <img src="https://flagcdn.com/16x12/ma.png" alt="MA" width="16" height="12"></span>
       </div>
       <div class="review">
-        <p>« J'adore le style et la protection contre la lumière bleue. »</p>
+        <div class="review-header">
+          <span class="star-rating">★★★★★</span>
+          <span class="verified-badge" title="Acheteur vérifié">✔️ Acheteur vérifié</span>
+        </div>
+        <p><b>Style</b> et <b>protection contre la lumière bleue</b> au top.</p>
         <span>- Salma, Rabat <img src="https://flagcdn.com/16x12/ma.png" alt="MA" width="16" height="12"></span>
       </div>
       <div class="review">
-        <p>« Service client au top, je recommande ! »</p>
+        <div class="review-header">
+          <span class="star-rating">★★★★★</span>
+          <span class="verified-badge" title="Acheteur vérifié">✔️ Acheteur vérifié</span>
+        </div>
+        <p><b>Service client</b> au top, <b>je recommande</b> !</p>
         <span>- Imane, Marrakech <img src="https://flagcdn.com/16x12/ma.png" alt="MA" width="16" height="12"></span>
       </div>
     </div>

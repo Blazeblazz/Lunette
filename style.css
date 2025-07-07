@@ -1,3 +1,29 @@
+/* Star Ratings, Verified Badge, and Bold Key Phrases for Reviews */
+.star-rating {
+  color: #FFD700;
+  font-size: 1.1em;
+  margin-right: 8px;
+  letter-spacing: 1px;
+}
+.verified-badge {
+  background: #e6fff7;
+  color: #00c3ad;
+  font-weight: bold;
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-size: 0.95em;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+.review-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+.review p b {
+  font-weight: bold;
+  color: #222;
+}
 /* About section collapsible/progressive disclosure */
 .about-list-collapsible {
   margin-bottom: 2.2em;
