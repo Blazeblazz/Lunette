@@ -77,8 +77,32 @@
         <div class="secure-order"><span>✔</span> Commande 100% sécurisée</div>
       </form>
     </div>
+
     <div class="hero-img-container">
       <img src="images/HERO.webp" alt="Lunettes Intelligentes" class="hero-img" width="420" height="420" loading="lazy">
+    </div>
+
+    <div class="about-compare-container" style="margin-top:1.5em;">
+      <h3 class="about-compare-title">Comparatif rapide</h3>
+      <table class="about-compare-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Lunettes Intelligentes</th>
+            <th>Lunettes classiques</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Bluetooth 5.0</td><td class="yes">✔</td><td class="no">✖</td></tr>
+          <tr><td>Appels mains libres</td><td class="yes">✔</td><td class="no">✖</td></tr>
+          <tr><td>Protection anti-lumière bleue</td><td class="yes">✔</td><td class="no">✖</td></tr>
+          <tr><td>Protection solaire UV400</td><td class="yes">✔</td><td class="no">✖</td></tr>
+          <tr><td>Écoute de musique</td><td class="yes">✔</td><td class="no">✖</td></tr>
+          <tr><td>Assistant vocal</td><td class="yes">✔</td><td class="no">✖</td></tr>
+          <tr><td>Prise de photos à distance</td><td class="yes">✔</td><td class="no">✖</td></tr>
+          <tr><td>Style moderne</td><td class="yes">✔</td><td class="no">✔</td></tr>
+        </tbody>
+      </table>
     </div>
   </section>
 
@@ -106,6 +130,103 @@
         <dotlottie-player src="https://lottie.host/ca813122-3953-4bfe-bef4-13f96781a8bd/GL0V38VUvY.lottie" background="transparent" speed="1" style="width:100px;height:100px;" loop autoplay aria-label="Écouter de la musique animé"></dotlottie-player>
         <p>Écouter de la musique</p>
       </div>
+    </div>
+  </section>
+  <!-- À propos du produit -->
+  <section class="about-product">
+    <div class="about-progress-bar-container">
+      <div class="about-progress-labels">
+        <span class="about-progress-title">Popularité</span>
+        <span id="about-progress-value" class="about-progress-value">0%</span>
+      </div>
+      <div class="about-progress-bar-bg">
+        <div id="about-progress-bar" class="about-progress-bar"></div>
+      </div>
+      <div class="about-progress-note">🔥 Ce produit est très demandé aujourd'hui&nbsp;!</div>
+    </div>
+    <h2 class="about-title">À propos de ce produit</h2>
+    <ul class="about-list about-list-collapsible">
+      <li><b>Lunettes audio à oreilles libres</b> <span class="about-more" onclick="toggleAboutDetail(this)">En savoir plus</span>
+        <div class="about-detail">Musique et appels mains libres grâce à des haut-parleurs et micro intégrés.</div>
+      </li>
+      <li><b>Commandes tactiles</b> <span class="about-more" onclick="toggleAboutDetail(this)">En savoir plus</span>
+        <div class="about-detail">Changez de musique, répondez à un appel ou activez l’assistant vocal d’un simple geste.</div>
+      </li>
+      <li><b>Fonctions principales</b> <span class="about-more" onclick="toggleAboutDetail(this)">En savoir plus</span>
+        <div class="about-detail">Lecture/pause, changement de piste, volume, appels, assistant vocal, photo à distance.</div>
+      </li>
+      <li><b>Grande autonomie</b> <span class="about-more" onclick="toggleAboutDetail(this)">En savoir plus</span>
+        <div class="about-detail">Jusqu’à 4h d’écoute/appels, 150h veille, recharge rapide 1,2h.</div>
+      </li>
+      <li><b>Télécommande photo</b> <span class="about-more" onclick="toggleAboutDetail(this)">En savoir plus</span>
+        <div class="about-detail">Prenez des photos à distance en touchant la branche (après ouverture de l’appareil photo).</div>
+      </li>
+      <li><b>Ultra légères & confortables</b> <span class="about-more" onclick="toggleAboutDetail(this)">En savoir plus</span>
+        <div class="about-detail">Seulement 35g, adaptées à toutes les formes de visage.</div>
+      </li>
+      <li><b>Polyvalentes</b> <span class="about-more" onclick="toggleAboutDetail(this)">En savoir plus</span>
+        <div class="about-detail">Musique, appels, GPS, télétravail, sport, TV, et plus.</div>
+      </li>
+    </ul>
+<script>
+// Collapse/expand for about section (progressive disclosure)
+function toggleAboutDetail(el) {
+  var detail = el.nextElementSibling;
+  if (!detail) return;
+  var open = detail.classList.contains('open');
+  document.querySelectorAll('.about-detail.open').forEach(d => d.classList.remove('open'));
+  document.querySelectorAll('.about-more.active').forEach(m => m.classList.remove('active'));
+  if (!open) {
+    detail.classList.add('open');
+    el.classList.add('active');
+  }
+}
+</script>
+    <div class="about-compare-container">
+      <h3 class="about-compare-title">Comparatif rapide</h3>
+      <table class="about-compare-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Lunettes Intelligentes</th>
+            <th>Lunettes classiques</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Bluetooth 5.0</td><td class="yes">✔</td><td class="no">✖</td></tr>
+          <tr><td>Appels mains libres</td><td class="yes">✔</td><td class="no">✖</td></tr>
+          <tr><td>Protection anti-lumière bleue</td><td class="yes">✔</td><td class="no">✖</td></tr>
+          <tr><td>Protection solaire UV400</td><td class="yes">✔</td><td class="no">✖</td></tr>
+          <tr><td>Écoute de musique</td><td class="yes">✔</td><td class="no">✖</td></tr>
+          <tr><td>Assistant vocal</td><td class="yes">✔</td><td class="no">✖</td></tr>
+          <tr><td>Prise de photos à distance</td><td class="yes">✔</td><td class="no">✖</td></tr>
+          <tr><td>Style moderne</td><td class="yes">✔</td><td class="no">✔</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <a id="table-commandes"></a>
+    <div style="overflow-x:auto;margin-top:1.7em;">
+      <table class="commandes-table">
+        <caption style="caption-side:top;padding-bottom:0.7em;font-weight:600;color:#00c3ad;font-size:1.13em;">Tableau des commandes tactiles</caption>
+        <thead>
+          <tr>
+            <th>Fonction</th>
+            <th>Opération</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><b>Allumer</b></td><td><span class="cmd">Appuyez longuement sur la ligne rouge des deux côtés pendant 5 secondes</span></td></tr>
+          <tr><td><b>Éteindre</b></td><td><span class="cmd">Appuyez longuement sur la ligne rouge des deux côtés pendant 5 secondes</span></td></tr>
+          <tr><td><b>Répondre / Raccrocher un appel</b></td><td><span class="cmd">Touchez (gauche ou droite) 1 fois</span></td></tr>
+          <tr><td><b>Rejeter un appel</b></td><td><span class="cmd">Appui long sur la touche tactile (gauche ou droite) pendant 2 secondes</span></td></tr>
+          <tr><td><b>Lecture / Pause musique</b></td><td><span class="cmd">Touchez (gauche ou droite) 1 fois</span></td></tr>
+          <tr><td><b>Piste précédente</b></td><td><span class="cmd">Touchez 2 fois côté gauche</span></td></tr>
+          <tr><td><b>Piste suivante</b></td><td><span class="cmd">Touchez 2 fois côté droit</span></td></tr>
+          <tr><td><b>Photo à distance</b></td><td><span class="cmd">Ouvrez l'appareil photo du téléphone, puis touchez 2 fois (gauche ou droite)</span></td></tr>
+          <tr><td><b>Activer assistant vocal</b></td><td><span class="cmd">Appui long sur les lignes rouges des deux côtés pendant 2 secondes (gauche ou droite)</span></td></tr>
+          <tr><td><b>Désactiver assistant vocal</b></td><td><span class="cmd">Touchez (gauche ou droite) 1 fois</span></td></tr>
+        </tbody>
+      </table>
     </div>
   </section>
 

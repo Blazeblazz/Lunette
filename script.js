@@ -1,3 +1,16 @@
+// About section animated progress bar
+document.addEventListener('DOMContentLoaded', function() {
+  var bar = document.getElementById('about-progress-bar');
+  var value = document.getElementById('about-progress-value');
+  if (bar && value) {
+    // Simulate popularity between 78% and 97% for social proof
+    var percent = Math.floor(Math.random() * 20) + 78;
+    setTimeout(function() {
+      bar.style.width = percent + '%';
+      value.textContent = percent + '%';
+    }, 400);
+  }
+});
 // Scroll progress bar
 window.addEventListener('scroll', function() {
   const bar = document.getElementById('scroll-progress-bar');
