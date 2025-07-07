@@ -1,5 +1,4 @@
 <div id="scroll-progress-bar" style="position:fixed;top:0;left:0;height:4px;width:0;background:#00c3ad;z-index:300;transition:width 0.2s;"></div>
-  <div id="offer-nudge" style="display:none;position:fixed;bottom:90px;left:50%;transform:translateX(-50%);background:#00c3ad;color:#fff;padding:1em 2em;border-radius:24px;box-shadow:0 4px 18px rgba(0,195,173,0.13);font-size:1.08rem;font-weight:700;z-index:300;animation:fadein-nudge 0.7s;"><span>🎉</span> Vous êtes éligible à l'offre du jour !</div>
   <div class="live-counter-bar">
     <span id="live-counter"></span> personnes consultent cette offre maintenant
   </div>
@@ -33,13 +32,14 @@
 <body>
   <!-- Hero Section with COD Form -->
   <section class="hero">
+    <h1><span class="highlight">Nouveau</span> : Smart-Glasses au Maroc</h1>
+    <p class="hero-desc">Protégez vos yeux, boostez votre style et profitez de la technologie. <b>Livraison rapide partout au Maroc, paiement à la livraison !</b></p>
+    <div class="promo-badge">-30% Promo Été</div>
     <div class="hero-content">
-      <h1><span class="highlight">Nouveau</span> : Smart-Glasses au Maroc</h1>
-      <p>Protégez vos yeux, boostez votre style et profitez de la technologie. <b>Livraison rapide partout au Maroc, paiement à la livraison !</b></p>
-        <div class="promo-badge">-30% Promo Été</div>
         <div class="price-box" style="margin:0.7em 0 0.5em 0;text-align:center;">
           <span style="font-size:1.5em;font-weight:700;color:#00c3ad;">249 Dh</span>
           <span class="compare-at" style="font-size:1.1em;text-decoration:line-through;margin-left:0.7em;">399 Dh</span>
+          <div class="free-shipping" style="color:#00897b;font-weight:700;font-size:1.08em;margin-top:0.3em;letter-spacing:0.01em;">🚚 Livraison Gratuite</div>
         </div>
       <form class="cod-form">
         <label for="variant">Choisissez votre modèle :</label>
@@ -49,6 +49,7 @@
           <input type="radio" id="anti-blue" name="variant" value="anti-blue">
           <label for="anti-blue">Anti-Blue</label>
         </div>
+        <div id="stock-indicator"></div>
         <div class="variant-images">
           <div id="grid-sunglasses" class="variant-grid fade-in" style="display:grid;grid-template-columns:1fr 1fr;gap:0.5em;max-width:240px;margin:0 auto 0.7em auto;">
             <img src="images/Sunglasses/s-l1600.webp" alt="Sunglasses 1" style="width:100%;border-radius:10px;" width="240" height="240">

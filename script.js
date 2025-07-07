@@ -7,12 +7,6 @@ window.addEventListener('scroll', function() {
   bar.style.width = percent + '%';
 });
 
-// Offer nudge after 10 seconds
-setTimeout(() => {
-  const nudge = document.getElementById('offer-nudge');
-  if (nudge) nudge.style.display = 'block';
-  setTimeout(() => { if (nudge) nudge.style.display = 'none'; }, 7000);
-}, 10000);
 // Variant image grid switcher with fade-in
 const sunglassesRadio = document.getElementById('sunglasses');
 const antiBlueRadio = document.getElementById('anti-blue');
@@ -39,6 +33,34 @@ if (sunglassesRadio && antiBlueRadio && gridSunglasses && gridAntiBlue) {
   // Initial fade-in
   setTimeout(() => gridSunglasses.classList.add('visible'), 10);
   updateVariantGrid();
+}
+// Stock display for variants
+const stock = {
+  'sunglasses': 19,
+  'anti-blue': 4
+};
+function updateStockDisplay() {
+  const variant = sunglassesRadio && sunglassesRadio.checked ? 'sunglasses' : 'anti-blue';
+  let stockText = '';
+  if (variant === 'sunglasses') {
+    stockText = `Stock restant : <b>${stock['sunglasses']}</b> paires`;
+  } else {
+    stockText = `Stock restant : <b>${stock['anti-blue']}</b> paires`;
+  }
+  let stockEl = document.getElementById('stock-indicator');
+  if (!stockEl) {
+    stockEl = document.createElement('div');
+    stockEl.id = 'stock-indicator';
+    stockEl.style.cssText = 'color:#d32f2f;font-weight:700;font-size:1.08em;margin-bottom:0.5em;text-align:center;';
+    const form = document.querySelector('.cod-form');
+    form.insertBefore(stockEl, form.querySelector('input'));
+  }
+  stockEl.innerHTML = stockText;
+}
+if (sunglassesRadio && antiBlueRadio) {
+  sunglassesRadio.addEventListener('change', updateStockDisplay);
+  antiBlueRadio.addEventListener('change', updateStockDisplay);
+  updateStockDisplay();
 }
 // Live Counter (Fake Real-Time Visitors)
 function startLiveCounter() {
