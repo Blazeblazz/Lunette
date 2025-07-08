@@ -57,14 +57,15 @@
   /* Stack footer links vertically */
   .footer-links {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    gap: 0.5em;
+    justify-content: center;
+    gap: 0.7em;
   }
   .footer-links a {
     margin: 0;
-    padding: 0.5em 0;
-    width: 100%;
+    padding: 0.5em 0.7em;
+    width: auto;
     text-align: center;
   }
   /* Add top margin to section headings */

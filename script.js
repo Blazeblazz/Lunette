@@ -160,3 +160,87 @@ accentHeadings.forEach(h => {
     h.insertAdjacentElement('afterend', bar);
   }
 });
+
+// MOBILE COLLAPSE/EXPAND LOGIC
+(function() {
+  if (window.innerWidth > 700) return;
+  // 1. Collapse About List
+  const aboutList = document.querySelector('.about-list-collapsible');
+  if (aboutList) {
+    const items = aboutList.querySelectorAll('li');
+    items.forEach((li, i) => {
+      if (i > 1) li.style.display = 'none';
+    });
+    if (items.length > 2) {
+      const btn = document.createElement('button');
+      btn.textContent = 'Voir plus';
+      btn.className = 'about-see-more';
+      btn.style = 'margin:0.7em auto 0 auto;display:block;background:#00c3ad;color:#fff;border:none;border-radius:18px;padding:0.7em 1.5em;font-weight:700;';
+      let expanded = false;
+      btn.onclick = function() {
+        expanded = !expanded;
+        items.forEach((li, i) => { if (i > 1) li.style.display = expanded ? '' : 'none'; });
+        btn.textContent = expanded ? 'Voir moins' : 'Voir plus';
+      };
+      aboutList.parentNode.insertBefore(btn, aboutList.nextSibling);
+    }
+  }
+  // 2. Collapse FAQ
+  document.querySelectorAll('.faq-list .faq-item').forEach((item, i) => {
+    if (i > 0) item.style.display = 'none';
+  });
+  const faqList = document.querySelector('.faq-list');
+  if (faqList && faqList.children.length > 1) {
+    const btn = document.createElement('button');
+    btn.textContent = 'Voir plus de questions';
+    btn.className = 'faq-see-more';
+    btn.style = 'margin:0.7em auto 0 auto;display:block;background:#00c3ad;color:#fff;border:none;border-radius:18px;padding:0.7em 1.5em;font-weight:700;';
+    let expanded = false;
+    btn.onclick = function() {
+      expanded = !expanded;
+      Array.from(faqList.children).forEach((item, i) => { if (i > 0) item.style.display = expanded ? '' : 'none'; });
+      btn.textContent = expanded ? 'Voir moins de questions' : 'Voir plus de questions';
+    };
+    faqList.parentNode.insertBefore(btn, faqList.nextSibling);
+  }
+  // 3. Collapse Reviews
+  const reviewList = document.querySelector('.review-list');
+  if (reviewList) {
+    const reviews = reviewList.querySelectorAll('.review');
+    reviews.forEach((r, i) => { if (i > 0) r.style.display = 'none'; });
+    if (reviews.length > 1) {
+      const btn = document.createElement('button');
+      btn.textContent = 'Voir plus d\'avis';
+      btn.className = 'reviews-see-more';
+      btn.style = 'margin:0.7em auto 0 auto;display:block;background:#00c3ad;color:#fff;border:none;border-radius:18px;padding:0.7em 1.5em;font-weight:700;';
+      let expanded = false;
+      btn.onclick = function() {
+        expanded = !expanded;
+        reviews.forEach((r, i) => { if (i > 0) r.style.display = expanded ? '' : 'none'; });
+        btn.textContent = expanded ? 'Voir moins d\'avis' : 'Voir plus d\'avis';
+      };
+      reviewList.parentNode.insertBefore(btn, reviewList.nextSibling);
+    }
+  }
+  // 4. Hide review image banner on very small screens
+  if (window.innerWidth < 375) {
+    var reviewImgBanner = document.querySelector('.review-image-banner');
+    if (reviewImgBanner) reviewImgBanner.style.display = 'none';
+  }
+  // 5. Move comparison table behind a button
+  var compareContainer = document.querySelector('.about-compare-container');
+  if (compareContainer) {
+    compareContainer.style.display = 'none';
+    var btn = document.createElement('button');
+    btn.textContent = 'Voir le comparatif';
+    btn.className = 'compare-see-more';
+    btn.style = 'margin:0.7em auto 1em auto;display:block;background:#00c3ad;color:#fff;border:none;border-radius:18px;padding:0.7em 1.5em;font-weight:700;';
+    let expanded = false;
+    btn.onclick = function() {
+      expanded = !expanded;
+      compareContainer.style.display = expanded ? '' : 'none';
+      btn.textContent = expanded ? 'Masquer le comparatif' : 'Voir le comparatif';
+    };
+    compareContainer.parentNode.insertBefore(btn, compareContainer);
+  }
+})();
