@@ -1,3 +1,22 @@
+/* Make hero images 2 per row */
+.hero-img-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  max-width: 900px;
+  margin: 0 auto 2em auto;
+}
+@media (max-width: 700px) {
+  .hero-img-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.7rem;
+    max-width: 98vw;
+  }
+  .hero-img-container {
+    max-width: 98vw;
+    margin: 0;
+  }
+}
 @media (max-width: 900px) {
   .features-list {
     display: grid !important;
@@ -128,10 +147,15 @@
 .about-compare-container {
   margin: 2em 0 1.5em 0;
   text-align: center;
+  border: 2px solid #e0f7f4;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(0,195,173,0.18), 0 2px 8px 0 rgba(0,0,0,0.08);
+  padding: 1.5em 1em 1.5em 1em;
+  background: #fff;
 }
 .about-compare-title {
-  color: #00c3ad;
-  font-size: 1.13em;
+  color: #000000;
+  font-size: 1.5em;
   font-weight: 700;
   margin-bottom: 0.7em;
 }

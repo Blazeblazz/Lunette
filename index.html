@@ -37,77 +37,18 @@
     <h1><span class="highlight">Nouveau</span> : Lunettes Intelligentes au Maroc</h1>
     <p class="hero-desc">Protégez vos yeux, boostez votre style et profitez de la technologie. <b>Livraison rapide partout au Maroc, paiement à la livraison !</b></p>
     <div class="promo-badge">-30% Promo Été</div>
-    <div class="hero-content">
-        <div class="price-box" style="margin:0.7em 0 0.5em 0;text-align:center;">
-          <span style="font-size:1.5em;font-weight:700;color:#00c3ad;">249 Dh</span>
-          <span class="compare-at" style="font-size:1.1em;text-decoration:line-through;margin-left:0.7em;">399 Dh</span>
-          <div class="free-shipping" style="color:#00897b;font-weight:700;font-size:1.08em;margin-top:0.3em;letter-spacing:0.01em;">🚚 Livraison Gratuite</div>
-        </div>
-      <form class="cod-form">
-        <label for="variant">Choisissez votre modèle :</label>
-        <div class="variant-toggle">
-          <input type="radio" id="sunglasses" name="variant" value="sunglasses" checked>
-          <label for="sunglasses">Solaire</label>
-          <input type="radio" id="anti-blue" name="variant" value="anti-blue">
-          <label for="anti-blue">Anti-Bleue</label>
-        </div>
-        <div id="stock-indicator" aria-live="polite"></div>
-        <div class="variant-images">
-          <div id="grid-sunglasses" class="variant-grid fade-in" style="display:grid;grid-template-columns:1fr 1fr;gap:0.5em;max-width:240px;margin:0 auto 0.7em auto;justify-items:center;align-items:center;">
-            <img src="images/Sunglasses/s-l1600.webp" alt="Solaire 1" style="width:100%;border-radius:10px;" width="240" height="240" loading="lazy">
-            <img src="images/Sunglasses/s-l1600 (1).webp" alt="Solaire 2" style="width:100%;border-radius:10px;" width="240" height="240" loading="lazy">
-            <img src="images/Sunglasses/s-l1600 (2).webp" alt="Solaire 3" style="width:100%;border-radius:10px;" width="240" height="240" loading="lazy">
-            <img src="images/Sunglasses/s-l1600 (3).webp" alt="Solaire 4" style="width:100%;border-radius:10px;" width="240" height="240" loading="lazy">
-          </div>
-          <div id="grid-anti-blue" class="variant-grid fade-in" style="display:none;grid-template-columns:1fr 1fr;gap:0.5em;max-width:240px;margin:0 auto 0.7em auto;">
-            <img src="images/Anti-Blue/81894808-0b55-4c26-b363-1223be921386.webp" alt="Anti-lumière bleue 1" style="width:100%;border-radius:10px;" width="240" height="240" loading="lazy">
-            <img src="images/Anti-Blue/9157749d-4ea9-4245-9e98-acac79dc96d1.webp" alt="Anti-lumière bleue 2" style="width:100%;border-radius:10px;" width="240" height="240" loading="lazy">
-            <img src="images/Anti-Blue/b8b53393-2fbc-4554-b582-c8c83edfb780.webp" alt="Anti-lumière bleue 3" style="width:100%;border-radius:10px;" width="240" height="240" loading="lazy">
-            <img src="images/Anti-Blue/e987bee7-43d8-4980-9382-42a85c85de72.webp" alt="Anti-lumière bleue 4" style="width:100%;border-radius:10px;" width="240" height="240" loading="lazy">
-          </div>
-        </div>
-        <label for="name">Nom complet</label>
-        <input type="text" id="name" name="name" placeholder="Votre nom" required>
-        <label for="phone">Téléphone</label>
-        <input type="tel" id="phone" name="phone" placeholder="Votre téléphone" required pattern="[0-9]{10}">
-        <label for="address">Ville</label>
-        <input type="text" id="address" name="address" placeholder="Ville" required>
-        <button type="submit">Commander</button>
-        <button class="scroll-to-reviews" type="button" onclick="document.getElementById('reviews').scrollIntoView({behavior: 'smooth'});">Voir les avis clients ↓</button>
-        <div class="secure-order"><span>✔</span> Commande 100% sécurisée</div>
-      </form>
-    </div>
+    <!-- Removed empty hero-content container after price moved below variants -->
 
 
-    <div class="hero-img-container">
-      <img src="images/HERO.webp" alt="Lunettes Intelligentes" class="hero-img" width="420" height="420" loading="lazy">
+    <div class="hero-img-row">
+      <div class="hero-img-container">
+        <img src="images/HERO.webp" alt="Lunettes Intelligentes" class="hero-img" width="420" height="420" loading="lazy">
+      </div>
+      <div class="hero-img-container">
+        <img src="images/2.webp" alt="Lunettes Intelligentes - Vue 2" class="hero-img" width="420" height="420" loading="lazy">
+      </div>
     </div>
-    <div class="hero-img-container">
-      <img src="images/2.webp" alt="Lunettes Intelligentes - Vue 2" class="hero-img" width="420" height="420" loading="lazy">
-    </div>
-
-    <div class="about-compare-container" style="margin-top:1.5em;">
-      <h3 class="about-compare-title">Comparatif rapide</h3>
-      <table class="about-compare-table">
-        <thead>
-          <tr>
-            <th></th>
-            <th>Lunettes Intelligentes</th>
-            <th>Lunettes classiques</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Bluetooth 5.0</td><td class="yes">✔</td><td class="no">✖</td></tr>
-          <tr><td>Appels mains libres</td><td class="yes">✔</td><td class="no">✖</td></tr>
-          <tr><td>Protection anti-lumière bleue</td><td class="yes">✔</td><td class="no">✖</td></tr>
-          <tr><td>Protection solaire UV400</td><td class="yes">✔</td><td class="no">✖</td></tr>
-          <tr><td>Écoute de musique</td><td class="yes">✔</td><td class="no">✖</td></tr>
-          <tr><td>Assistant vocal</td><td class="yes">✔</td><td class="no">✖</td></tr>
-          <tr><td>Prise de photos à distance</td><td class="yes">✔</td><td class="no">✖</td></tr>
-          <tr><td>Style moderne</td><td class="yes">✔</td><td class="no">✔</td></tr>
-        </tbody>
-      </table>
-    </div>
+    <!-- Comparison Table moved below video section -->
   </section>
 
   <!-- Features Section -->
@@ -134,10 +75,34 @@
         <dotlottie-player src="https://lottie.host/ca813122-3953-4bfe-bef4-13f96781a8bd/GL0V38VUvY.lottie" background="transparent" speed="1" style="width:100px;height:100px;" loop autoplay aria-label="Écouter de la musique animé"></dotlottie-player>
         <p>Écouter de la musique</p>
       </div>
+      <div class="feature">
+        <dotlottie-player src="https://lottie.host/bb95cb11-33ab-4d3c-9dc1-81808c82c87e/LnKHeesKie.lottie" background="transparent" speed="1" style="width:200px;height:100px;" loop autoplay aria-label="Batterie longue durée animé"></dotlottie-player>
+        <p>Batterie longue durée</p>
+      </div>
     </div>
   </section>
   <div class="video-banner" style="width:100%;margin:2em 0;text-align:center;">
     <video src="images/Lunette.mp4" autoplay loop muted playsinline style="max-width:100%;box-shadow:0 4px 24px #0001;" aria-label="Vidéo démonstration lunettes intelligentes"></video>
+  </div>
+
+  <div class="about-compare-container" style="margin-top:1.5em;">
+    <h3 class="about-compare-title"><span class="highlight">Comparatif</span> rapide</h3>
+    <table class="about-compare-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Lunettes Intelligentes</th>
+          <th>Lunettes classiques</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Bluetooth 5.0</td><td class="yes">✔</td><td class="no">✖</td></tr>
+        <tr><td>Protection anti-lumière bleue</td><td class="yes">✔</td><td class="no">✖</td></tr>
+        <tr><td>Protection solaire UV400</td><td class="yes">✔</td><td class="no">✖</td></tr>
+        <tr><td>Appels mains libres</td><td class="yes">✔</td><td class="no">✖</td></tr>
+      </tbody>
+    </table>
+  </div>
   </div>
   <!-- À propos du produit -->
   <section class="about-product">
@@ -175,6 +140,8 @@
         <div class="about-detail">Musique, appels, GPS, télétravail, sport, TV, et plus.</div>
       </li>
     </ul>
+
+    </ul>
 <script>
 // Collapse/expand for about section (progressive disclosure)
 function toggleAboutDetail(el) {
@@ -189,31 +156,7 @@ function toggleAboutDetail(el) {
   }
 }
 </script>
-    <!-- Comparison table removed: now only under hero image -->
-    <a id="table-commandes"></a>
-    <div style="overflow-x:auto;margin-top:1.7em;">
-      <table class="commandes-table">
-        <caption style="caption-side:top;padding-bottom:0.7em;font-weight:600;color:#00c3ad;font-size:1.13em;">Tableau des commandes tactiles</caption>
-        <thead>
-          <tr>
-            <th>Fonction</th>
-            <th>Opération</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td><b>Allumer</b></td><td><span class="cmd">Appuyez longuement sur la ligne rouge des deux côtés pendant 5 secondes</span></td></tr>
-          <tr><td><b>Éteindre</b></td><td><span class="cmd">Appuyez longuement sur la ligne rouge des deux côtés pendant 5 secondes</span></td></tr>
-          <tr><td><b>Répondre / Raccrocher un appel</b></td><td><span class="cmd">Touchez (gauche ou droite) 1 fois</span></td></tr>
-          <tr><td><b>Rejeter un appel</b></td><td><span class="cmd">Appui long sur la touche tactile (gauche ou droite) pendant 2 secondes</span></td></tr>
-          <tr><td><b>Lecture / Pause musique</b></td><td><span class="cmd">Touchez (gauche ou droite) 1 fois</span></td></tr>
-          <tr><td><b>Piste précédente</b></td><td><span class="cmd">Touchez 2 fois côté gauche</span></td></tr>
-          <tr><td><b>Piste suivante</b></td><td><span class="cmd">Touchez 2 fois côté droit</span></td></tr>
-          <tr><td><b>Photo à distance</b></td><td><span class="cmd">Ouvrez l'appareil photo du téléphone, puis touchez 2 fois (gauche ou droite)</span></td></tr>
-          <tr><td><b>Activer assistant vocal</b></td><td><span class="cmd">Appui long sur les lignes rouges des deux côtés pendant 2 secondes (gauche ou droite)</span></td></tr>
-          <tr><td><b>Désactiver assistant vocal</b></td><td><span class="cmd">Touchez (gauche ou droite) 1 fois</span></td></tr>
-        </tbody>
-      </table>
-    </div>
+
   </section>
 
   <!-- Reviews Section -->
@@ -253,7 +196,47 @@ function toggleAboutDetail(el) {
     </div>
   </section>
 
-  <!-- FAQ Section -->
+  <!-- Order Form Section (moved below reviews) -->
+  <section class="order-form-section">
+    <form class="cod-form">
+      <label for="variant">Choisissez votre modèle :</label>
+      <div class="variant-toggle">
+        <input type="radio" id="sunglasses" name="variant" value="sunglasses" checked>
+        <label for="sunglasses">Solaire</label>
+        <input type="radio" id="anti-blue" name="variant" value="anti-blue">
+        <label for="anti-blue">Anti-Bleue</label>
+      </div>
+      <div id="stock-indicator" aria-live="polite"></div>
+      <div class="variant-images">
+        <div id="grid-sunglasses" class="variant-grid fade-in" style="display:grid;grid-template-columns:1fr 1fr;gap:0.5em;max-width:240px;margin:0 auto 0.7em auto;justify-items:center;align-items:center;">
+          <img src="images/Sunglasses/s-l1600.webp" alt="Solaire 1" style="width:100%;border-radius:10px;" width="240" height="240" loading="lazy">
+          <img src="images/Sunglasses/s-l1600 (1).webp" alt="Solaire 2" style="width:100%;border-radius:10px;" width="240" height="240" loading="lazy">
+          <img src="images/Sunglasses/s-l1600 (2).webp" alt="Solaire 3" style="width:100%;border-radius:10px;" width="240" height="240" loading="lazy">
+          <img src="images/Sunglasses/s-l1600 (3).webp" alt="Solaire 4" style="width:100%;border-radius:10px;" width="240" height="240" loading="lazy">
+        </div>
+        <div id="grid-anti-blue" class="variant-grid fade-in" style="display:none;grid-template-columns:1fr 1fr;gap:0.5em;max-width:240px;margin:0 auto 0.7em auto;">
+          <img src="images/Anti-Blue/81894808-0b55-4c26-b363-1223be921386.webp" alt="Anti-lumière bleue 1" style="width:100%;border-radius:10px;" width="240" height="240" loading="lazy">
+          <img src="images/Anti-Blue/9157749d-4ea9-4245-9e98-acac79dc96d1.webp" alt="Anti-lumière bleue 2" style="width:100%;border-radius:10px;" width="240" height="240" loading="lazy">
+          <img src="images/Anti-Blue/b8b53393-2fbc-4554-b582-c8c83edfb780.webp" alt="Anti-lumière bleue 3" style="width:100%;border-radius:10px;" width="240" height="240" loading="lazy">
+          <img src="images/Anti-Blue/e987bee7-43d8-4980-9382-42a85c85de72.webp" alt="Anti-lumière bleue 4" style="width:100%;border-radius:10px;" width="240" height="240" loading="lazy">
+        </div>
+      <div class="price-box" style="margin:1em 0 0.5em 0;text-align:center;">
+        <span style="font-size:1.5em;font-weight:700;color:#00c3ad;">249 Dh</span>
+        <span class="compare-at" style="font-size:1.1em;text-decoration:line-through;margin-left:0.7em;">399 Dh</span>
+        <div class="free-shipping" style="color:#00897b;font-weight:700;font-size:1.08em;margin-top:0.3em;letter-spacing:0.01em;">🚚 Livraison Gratuite</div>
+      </div>
+      </div>
+      <label for="name">Nom complet</label>
+      <input type="text" id="name" name="name" placeholder="Votre nom" required>
+      <label for="phone">Téléphone</label>
+      <input type="tel" id="phone" name="phone" placeholder="Votre téléphone" required pattern="[0-9]{10}">
+      <label for="address">Ville</label>
+      <input type="text" id="address" name="address" placeholder="Ville" required>
+      <button type="submit">Commander</button>
+      <button class="scroll-to-reviews" type="button" onclick="document.getElementById('reviews').scrollIntoView({behavior: 'smooth'});">Voir les avis clients ↓</button>
+      <div class="secure-order"><span>✔</span> Commande 100% sécurisée</div>
+    </form>
+  </section>
   <section class="faq">
     <h2><span class="highlight">Questions</span> fréquentes</h2>
     <div class="faq-list">
@@ -281,6 +264,29 @@ function toggleAboutDetail(el) {
       <li>Service client réactif et à l’écoute</li>
       <li>Garantie satisfait ou remboursé 7 jours</li>
     </ul>
+    <div style="overflow-x:auto;margin-top:1.7em;">
+      <table class="commandes-table">
+        <caption style="caption-side:top;padding-bottom:0.7em;font-weight:600;color:#000000;font-size:1.5em;">Tableau des <span class="highlight">commandes tactiles</span></caption>
+        <thead>
+          <tr>
+            <th>Fonction</th>
+            <th>Opération</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><b>Allumer</b></td><td><span class="cmd">Appuyez longuement sur la ligne rouge des deux côtés pendant 5 secondes</span></td></tr>
+          <tr><td><b>Éteindre</b></td><td><span class="cmd">Appuyez longuement sur la ligne rouge des deux côtés pendant 5 secondes</span></td></tr>
+          <tr><td><b>Répondre / Raccrocher un appel</b></td><td><span class="cmd">Touchez (gauche ou droite) 1 fois</span></td></tr>
+          <tr><td><b>Rejeter un appel</b></td><td><span class="cmd">Appui long sur la touche tactile (gauche ou droite) pendant 2 secondes</span></td></tr>
+          <tr><td><b>Lecture / Pause musique</b></td><td><span class="cmd">Touchez (gauche ou droite) 1 fois</span></td></tr>
+          <tr><td><b>Piste précédente</b></td><td><span class="cmd">Touchez 2 fois côté gauche</span></td></tr>
+          <tr><td><b>Piste suivante</b></td><td><span class="cmd">Touchez 2 fois côté droit</span></td></tr>
+          <tr><td><b>Photo à distance</b></td><td><span class="cmd">Ouvrez l'appareil photo du téléphone, puis touchez 2 fois (gauche ou droite)</span></td></tr>
+          <tr><td><b>Activer assistant vocal</b></td><td><span class="cmd">Appui long sur les lignes rouges des deux côtés pendant 2 secondes (gauche ou droite)</span></td></tr>
+          <tr><td><b>Désactiver assistant vocal</b></td><td><span class="cmd">Touchez (gauche ou droite) 1 fois</span></td></tr>
+        </tbody>
+      </table>
+    </div>
   </section>
 
   <!-- Footer -->
