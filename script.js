@@ -102,15 +102,19 @@ function startLiveCounter() {
 }
 startLiveCounter();
 // FAQ Accordion
+// Add aria-expanded for accessibility
 document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.setAttribute('aria-expanded', 'false');
   btn.addEventListener('click', function() {
     const item = this.closest('.faq-item');
     const open = item.classList.contains('open');
     document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
     document.querySelectorAll('.faq-question').forEach(q => q.classList.remove('active'));
+    document.querySelectorAll('.faq-question').forEach(q => q.setAttribute('aria-expanded', 'false'));
     if (!open) {
       item.classList.add('open');
       this.classList.add('active');
+      this.setAttribute('aria-expanded', 'true');
     }
   });
 });
@@ -131,4 +135,28 @@ document.querySelector('.cod-form').addEventListener('submit', function(e) {
     this.querySelector('button[type="submit"]').disabled = false;
     this.querySelector('button[type="submit"]').textContent = 'Commander';
   }, 1200);
+});
+
+// Hide sticky order bar when form input is focused (prevents keyboard overlap on mobile)
+(function() {
+  const stickyBar = document.querySelector('.sticky-order-bar');
+  if (!stickyBar) return;
+  const formInputs = document.querySelectorAll('.cod-form input, .cod-form select, .cod-form textarea');
+  formInputs.forEach(input => {
+    input.addEventListener('focus', () => {
+      stickyBar.style.display = 'none';
+    });
+    input.addEventListener('blur', () => {
+      stickyBar.style.display = '';
+    });
+  });
+})();
+// Add animated accent bar under all main section headings
+const accentHeadings = document.querySelectorAll('.hero h1, .features h2, .about-compare-title, .about-title, .reviews h2, .faq h2, .engagements-title');
+accentHeadings.forEach(h => {
+  if (!h.querySelector('.section-heading-bar')) {
+    const bar = document.createElement('span');
+    bar.className = 'section-heading-bar';
+    h.insertAdjacentElement('afterend', bar);
+  }
 });

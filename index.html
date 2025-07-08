@@ -9,7 +9,7 @@
   </div>
   <!-- Sticky Order Bar (Mobile) -->
   <div class="sticky-order-bar">
-    <button class="sticky-order-btn" onclick="window.scrollTo({top: document.querySelector('.cod-form').getBoundingClientRect().top + window.scrollY - 20, behavior: 'smooth'});">Commander</button>
+    <button class="sticky-order-btn" aria-label="Commander maintenant - Aller au formulaire de commande" onclick="window.scrollTo({top: document.querySelector('.cod-form').getBoundingClientRect().top + window.scrollY - 20, behavior: 'smooth'});">Commander</button>
     <a href="https://wa.me/212600000000?text=Bonjour%2C%20je%20veux%20commander%20les%20Lunettes%20Intelligentes%20!" target="_blank" rel="noopener" class="sticky-wa-btn" aria-label="WhatsApp">
       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" /> WhatsApp
     </a>
@@ -49,7 +49,11 @@
       </div>
     </div>
     <!-- Comparison Table moved below video section -->
+    <div style="text-align:center;margin:1.5em 0;">
+      <button class="scroll-to-order" type="button" aria-label="Retourner au formulaire de commande" onclick="document.querySelector('.order-form-section').scrollIntoView({behavior: 'smooth'});">Commander maintenant ↑</button>
+    </div>
   </section>
+  <div class="section-divider"></div>
 
   <!-- Features Section -->
   <section class="features">
@@ -80,13 +84,18 @@
         <p>Batterie longue durée</p>
       </div>
     </div>
+    <div style="text-align:center;margin:1.5em 0;">
+      <button class="scroll-to-order" type="button" aria-label="Retourner au formulaire de commande" onclick="document.querySelector('.order-form-section').scrollIntoView({behavior: 'smooth'});">Commander maintenant ↑</button>
+    </div>
   </section>
+  <div class="section-divider"></div>
   <div class="video-banner" style="width:100%;margin:2em 0;text-align:center;">
     <video src="images/Lunette.mp4" autoplay loop muted playsinline style="max-width:100%;box-shadow:0 4px 24px #0001;" aria-label="Vidéo démonstration lunettes intelligentes"></video>
   </div>
+  <div class="section-divider"></div>
 
   <div class="about-compare-container" style="margin-top:1.5em;">
-    <h3 class="about-compare-title"><span class="highlight">Comparatif</span> rapide</h3>
+    <h2 class="about-compare-title"><span class="highlight">Comparatif</span> rapide</h2>
     <table class="about-compare-table">
       <thead>
         <tr>
@@ -105,6 +114,7 @@
   </div>
   </div>
   <!-- À propos du produit -->
+  <div class="section-divider"></div>
   <section class="about-product">
     <div class="about-progress-bar-container">
       <div class="about-progress-labels">
@@ -158,11 +168,13 @@ function toggleAboutDetail(el) {
 </script>
 
   </section>
+  <div class="section-divider"></div>
 
   <!-- Reviews Section -->
   <div class="review-image-banner" style="text-align:center;margin-bottom:1.5em;">
     <img src="images/model.webp" alt="Client portant les lunettes" style="max-width:100%;height:auto;box-shadow:0 4px 24px #0001;">
   </div>
+  <div class="section-divider"></div>
   <section class="reviews" id="reviews">
     <h2><span class="highlight">Avis</span> de nos clients</h2>
     <div class="review-list">
@@ -195,8 +207,10 @@ function toggleAboutDetail(el) {
       </div>
     </div>
   </section>
+  <div class="section-divider"></div>
 
   <!-- Order Form Section (moved below reviews) -->
+  <div class="section-divider"></div>
   <section class="order-form-section">
     <form class="cod-form">
       <label for="variant">Choisissez votre modèle :</label>
@@ -232,30 +246,32 @@ function toggleAboutDetail(el) {
       <input type="tel" id="phone" name="phone" placeholder="Votre téléphone" required pattern="[0-9]{10}">
       <label for="address">Ville</label>
       <input type="text" id="address" name="address" placeholder="Ville" required>
-      <button type="submit">Commander</button>
-      <button class="scroll-to-reviews" type="button" onclick="document.getElementById('reviews').scrollIntoView({behavior: 'smooth'});">Voir les avis clients ↓</button>
+      <button type="submit" aria-label="Commander maintenant - Envoyer la commande">Commander</button>
+      <button class="scroll-to-reviews" type="button" aria-label="Voir les avis clients" onclick="document.getElementById('reviews').scrollIntoView({behavior: 'smooth'});">Voir les avis clients ↓</button>
       <div class="secure-order"><span>✔</span> Commande 100% sécurisée</div>
     </form>
   </section>
+  <div class="section-divider"></div>
   <section class="faq">
     <h2><span class="highlight">Questions</span> fréquentes</h2>
     <div class="faq-list">
       <div class="faq-item">
-        <button class="faq-question" type="button">Comment passer commande&nbsp;?</button>
+        <button class="faq-question" type="button" aria-label="Afficher la réponse à : Comment passer commande ?">Comment passer commande&nbsp;?</button>
         <div class="faq-answer">Remplissez le formulaire en haut de la page et nous vous contacterons pour confirmer votre commande.</div>
       </div>
       <div class="faq-item">
-        <button class="faq-question" type="button">Quels sont les délais de livraison&nbsp;?</button>
+        <button class="faq-question" type="button" aria-label="Afficher la réponse à : Quels sont les délais de livraison ?">Quels sont les délais de livraison&nbsp;?</button>
         <div class="faq-answer">Livraison en 2 à 5 jours ouvrables partout au Maroc.</div>
       </div>
       <div class="faq-item">
-        <button class="faq-question" type="button">Puis-je payer à la livraison&nbsp;?</button>
+        <button class="faq-question" type="button" aria-label="Afficher la réponse à : Puis-je payer à la livraison ?">Puis-je payer à la livraison&nbsp;?</button>
         <div class="faq-answer">Oui, le paiement se fait à la livraison (paiement à la livraison).</div>
       </div>
     </div>
   </section>
 
   <!-- Nos engagements Section -->
+  <div class="section-divider"></div>
   <section class="engagements">
     <h2 class="engagements-title">Nos engagements</h2>
     <ul class="engagements-list">
@@ -266,7 +282,7 @@ function toggleAboutDetail(el) {
     </ul>
     <div style="overflow-x:auto;margin-top:1.7em;">
       <table class="commandes-table">
-        <caption style="caption-side:top;padding-bottom:0.7em;font-weight:600;color:#000000;font-size:1.5em;">Tableau des <span class="highlight">commandes tactiles</span></caption>
+        <caption style="caption-side:top;padding-bottom:0.7em;font-weight:600;color:#000000;font-size:1.2em;"><h3 style="display:inline;font-size:inherit;font-weight:inherit;margin:0;">Tableau des <span class="highlight">commandes tactiles</span></h3></caption>
         <thead>
           <tr>
             <th>Fonction</th>

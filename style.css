@@ -1,3 +1,34 @@
+@media (max-width: 700px) {
+  body {
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  h1 {
+    font-size: 1.7em;
+    margin-bottom: 0.7em;
+  }
+  h2 {
+    font-size: 1.35em;
+    margin-bottom: 0.7em;
+  }
+  h3 {
+    font-size: 1.2em;
+    margin-bottom: 0.6em;
+  }
+  .cod-form input {
+    font-size: 1.1em;
+    padding: 1.1em 1em;
+    margin-bottom: 1.15em;
+  }
+  .cod-form button[type="submit"] {
+    padding: 1.25em 2.4em;
+    margin-bottom: 1.2em;
+  }
+  .cod-form button:not([type="submit"]) {
+    padding: 1.1em 1.2em;
+    margin-bottom: 1.1em;
+  }
+}
 /* Make hero images 2 per row */
 .hero-img-row {
   display: grid;
@@ -15,6 +46,40 @@
   .hero-img-container {
     max-width: 98vw;
     margin: 0;
+  }
+  /* Reduce vertical margins for images and banners */
+  .hero-img-row,
+  .review-image-banner,
+  .video-banner {
+    margin-top: 0.7em !important;
+    margin-bottom: 0.7em !important;
+  }
+  /* Stack footer links vertically */
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+  }
+  .footer-links a {
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    text-align: center;
+  }
+  /* Add top margin to section headings */
+  h1, h2, h3 {
+    margin-top: 1.1em;
+  }
+  /* Remove bottom margin if followed by divider */
+  h1 + .section-divider,
+  h2 + .section-divider,
+  h3 + .section-divider {
+    margin-top: 0.2em;
+  }
+  /* Prevent horizontal scroll */
+  html, body {
+    overflow-x: hidden;
   }
 }
 @media (max-width: 900px) {
@@ -67,16 +132,18 @@
   font-size: 1.1em;
   margin-right: 8px;
   letter-spacing: 1px;
+  text-shadow: 0 1px 2px #000a;
 }
 .verified-badge {
   background: #e6fff7;
-  color: #00c3ad;
+  color: #00796b;
   font-weight: bold;
   border-radius: 6px;
   padding: 2px 8px;
   font-size: 0.95em;
   margin-left: 8px;
   vertical-align: middle;
+  border: 1.5px solid #00c3ad;
 }
 .review-header {
   display: flex;
@@ -390,8 +457,8 @@
 }
 .faq-question {
   width: 100%;
-  background: #e6fcf8;
-  color: #00c3ad;
+  background: #c6f4ec;
+  color: #00897b;
   border: none;
   border-radius: 8px;
   font-size: 1.05rem;
@@ -518,11 +585,40 @@
   background: #00c3ad;
   color: #fff;
 }
+.scroll-to-order {
+  display: inline-block;
+  margin: 0.7em auto 0 auto;
+  background: #00c3ad;
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  font-size: 1.13rem;
+  font-weight: 700;
+  padding: 1em 2.1em;
+  min-width: 44px;
+  min-height: 44px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.18s;
+}
+.scroll-to-order:hover, .scroll-to-order:active {
+  background: #009e8e;
+  color: #fff;
+  transform: scale(1.04);
+}
+@media (max-width: 700px) {
+  .scroll-to-order {
+    font-size: 1.08rem;
+    padding: 1em 1.2em;
+  }
+}
 body {
   font-family: 'Poppins', 'Montserrat', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(180deg, #f9f9f9 0%, #e6fcf8 100%);
+  background: linear-gradient(180deg, #f9f9f9 0%, #e6fcf8 100%),
+    repeating-linear-gradient(135deg, #e6fcf8 0 2px, transparent 2px 32px);
+  background-size: auto, 120px 120px;
   min-height: 100vh;
   color: #222;
 }
@@ -538,8 +634,8 @@ body {
   overflow: hidden;
 }
 .highlight {
-  color: #00c3ad;
-  background: #e6fcf8;
+  color: #00897b;
+  background: #c6f4ec;
   border-radius: 6px;
   padding: 0 0.4em;
   font-weight: 700;
@@ -662,7 +758,36 @@ body {
   box-shadow: 0 0 0 2px #ffe0b2;
   outline: none;
 }
-.cod-form button {
+/* Bolder, animated CTA for Commander button */
+/* Bolder, animated CTA for Commander button with improved contrast */
+.cod-form button[type="submit"] {
+  background: linear-gradient(90deg, #00897b 0%, #00c3ad 100%);
+  color: #fff;
+  border: 2.5px solid #005a4f;
+  border-radius: 7px;
+  padding: 1.1rem 2.2rem;
+  font-size: 1.22rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 6px 24px rgba(0,89,79,0.18), 0 1.5px 0 #005a4f;
+  letter-spacing: 0.03em;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: background 0.22s, box-shadow 0.22s, transform 0.18s;
+  animation: pulse-cta 1.5s infinite alternate cubic-bezier(.4,0,.2,1);
+}
+.cod-form button[type="submit"]:hover {
+  background: linear-gradient(90deg, #005a4f 0%, #00c3ad 100%);
+  box-shadow: 0 8px 32px rgba(0,89,79,0.23), 0 2px 0 #005a4f;
+  transform: scale(1.045);
+}
+@keyframes pulse-cta {
+  0% { box-shadow: 0 6px 24px rgba(0,195,173,0.18), 0 1.5px 0 #009e8e; }
+  100% { box-shadow: 0 12px 36px rgba(0,195,173,0.28), 0 2.5px 0 #009e8e; }
+}
+/* Keep other cod-form buttons (like scroll-to-reviews) normal */
+.cod-form button:not([type="submit"]) {
   background: #00c3ad;
   color: #fff;
   border: none;
@@ -672,6 +797,9 @@ body {
   font-weight: 700;
   cursor: pointer;
   transition: background 0.2s;
+}
+.cod-form button:not([type="submit"]):hover {
+  background: #009e8e;
 }
 .cod-form button:hover {
   background: #009e8e;
@@ -1102,31 +1230,121 @@ footer {
   margin-bottom: 0.7em;
   font-weight: 500;
 }
-@media (min-width: 900px) {
-  .hero > h1 {
-    margin-top: 3.5rem;
-    margin-bottom: 0.7rem;
+.section-divider {
+  width: 100%;
+  max-width: 900px;
+  margin: 2.2em auto 2.2em auto;
+  border: none;
+  border-top: 1.5px solid #e0f7f4;
+  background: linear-gradient(90deg, #e6fcf8 0%, #fff 50%, #e6fcf8 100%);
+  height: 0;
+  opacity: 0.85;
+}
+@media (max-width: 700px) {
+  .section-divider {
+    margin: 1.3em auto 1.3em auto;
+    border-top-width: 1px;
   }
-  .promo-badge {
-    margin-bottom: 1.7rem;
-    margin-top: 1.7rem;
+  .cod-form button,
+  .cod-form input,
+  .cod-form select,
+  .faq-question,
+  .sticky-order-btn,
+  .sticky-wa-btn,
+  .scroll-to-reviews,
+  .footer-links a {
+    min-height: 44px;
+    min-width: 44px;
   }
-  .hero-content {
-    margin-bottom: 0;
-    padding-top: 2.7rem;
-    padding-bottom: 2.2rem;
+  .variant-toggle label,
+  .variant-toggle input[type="radio"] {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 0.5em 1em;
+    font-size: 1.1em;
   }
+  .feature,
+  .review,
+  .section-divider {
+    transition-duration: 0.18s !important;
+  }
+  .faq-question:active,
+  .faq-question.active {
+    background: #b2e9df;
+  }
+  @media (max-width: 400px) {
+  .hero,
+  .about-product,
+  .order-form-section,
+  .faq,
   .engagements {
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
-    padding-top: 2.2rem;
-    padding-bottom: 2.2rem;
+    padding-top: 1.1rem !important;
+    padding-bottom: 1.1rem !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
   }
-  .features, .reviews, .faq {
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
+  .section-divider {
+    margin: 0.7em auto 0.7em auto;
   }
-  footer {
-    margin-top: 2.5rem;
+}
+.cod-form input,
+.cod-form select,
+.cod-form textarea {
+  font-size: 16px !important;
+}
+/* Card shadow for main content sections */
+.hero, .about-product, .order-form-section, .faq, .engagements, .features, .reviews {
+  box-shadow: 0 2px 12px rgba(0,195,173,0.07);
+  background: #fff;
+  border-radius: 14px;
+}
+/* Tap feedback for all buttons/links */
+  button:active, .sticky-order-btn:active, .sticky-wa-btn:active, .scroll-to-reviews:active, .scroll-to-order:active, .footer-links a:active {
+    filter: brightness(0.93);
+    outline: 2px solid #00c3ad;
   }
+}
+
+/* 1. Animated Gradient Accent Bar for Section Headings */
+.section-heading-bar {
+  display: block;
+  width: 64px;
+  height: 4px;
+  margin: 0.5em auto 1.1em auto;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #00c3ad, #ffb300, #00b894);
+  background-size: 200% 100%;
+  animation: heading-bar-move 2.5s linear infinite alternate;
+  box-shadow: 0 1px 6px #00c3ad22;
+}
+@keyframes heading-bar-move {
+  0% { background-position: 0% 0; }
+  100% { background-position: 100% 0; }
+}
+
+/* 2. Soft Glow on Main CTAs */
+.cod-form button[type="submit"], .sticky-order-btn, .scroll-to-order {
+  box-shadow: 0 0 0 0 #00c3ad66, 0 2px 8px rgba(0,195,173,0.07);
+  transition: box-shadow 0.22s, background 0.22s, transform 0.18s;
+}
+.cod-form button[type="submit"]:hover, .sticky-order-btn:hover, .scroll-to-order:hover {
+  box-shadow: 0 0 16px 2px #00c3ad55, 0 8px 32px rgba(0,195,173,0.13);
+}
+
+/* 3. Card Hover Lift (Features/Reviews) */
+.feature, .review {
+  transition: box-shadow 0.18s, transform 0.18s;
+}
+.feature:hover, .feature:active, .review:hover, .review:active {
+  box-shadow: 0 6px 24px #00c3ad22, 0 2px 8px #0001;
+  transform: translateY(-3px) scale(1.025);
+  z-index: 2;
+}
+
+/* 4. Subtle Background Pattern */
+body {
+  /* ...existing code... */
+  background: linear-gradient(180deg, #f9f9f9 0%, #e6fcf8 100%),
+    repeating-linear-gradient(135deg, #e6fcf8 0 2px, transparent 2px 32px);
+  background-size: auto, 120px 120px;
 }
