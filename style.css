@@ -129,22 +129,23 @@
 }
 /* Star Ratings, Verified Badge, and Bold Key Phrases for Reviews */
 .star-rating {
-  color: #FFD700;
-  font-size: 1.1em;
+  color: #FFD700 !important;
+  font-size: 1.18em;
   margin-right: 8px;
   letter-spacing: 1px;
   text-shadow: 0 1px 2px #000a;
 }
 .verified-badge {
-  background: #e6fff7;
-  color: #00796b;
+  background: none;
+  color: #00c3ad;
   font-weight: bold;
-  border-radius: 6px;
-  padding: 2px 8px;
-  font-size: 0.95em;
+  border-radius: 0;
+  padding: 0 4px;
+  font-size: 1em;
   margin-left: 8px;
   vertical-align: middle;
-  border: 1.5px solid #00c3ad;
+  border: none;
+  box-shadow: none;
 }
 .review-header {
   display: flex;
@@ -643,7 +644,7 @@ body {
 }
 .promo-badge {
   display: inline-block;
-  background: #ffb300;
+  background: #919191;
   color: #fff;
   font-weight: 700;
   padding: 0.5em 1.2em;
@@ -868,19 +869,58 @@ body {
   font-size: 1.4rem;
   margin-bottom: 1rem;
 }
+/* Reviews: 1:1 solid bordered, stacked, image containers 1:1 */
 .review-list {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2.2rem;
+  justify-content: center;
+  align-items: stretch;
 }
 .review {
   background: #fff;
-  border-radius: 10px;
-  padding: 1rem 1.2rem;
+  border-radius: 16px;
+  border: 2.5px solid #00c3ad;
+  box-shadow: none;
+  padding: 1.2rem 1.2rem 1.2rem 1.2rem;
   max-width: 320px;
-  box-shadow: 0 1px 6px rgba(0,0,0,0.04);
-  min-height: 110px;
+  min-width: 220px;
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.7em;
+  margin: 0.5em 0;
+  box-sizing: border-box;
+}
+.review-photo {
+  width: 140px !important;
+  height: 140px !important;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 16px !important;
+  border: 2.5px solid #00c3ad;
+  margin-bottom: 0.7em !important;
+  box-shadow: 0 2px 12px #00c3ad22;
+  background: #e6fcf8;
+  display: block;
+}
+.review-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 0.2em;
+  width: 100%;
+  justify-content: center;
+}
+.review p {
+  margin: 0.5em 0 0.2em 0;
+  font-size: 1.08em;
+  color: #222;
+  text-align: center;
 }
 .review span {
   display: flex;
@@ -889,6 +929,27 @@ body {
   margin-top: 0.5rem;
   color: #00c3ad;
   font-weight: 600;
+  justify-content: center;
+  width: 100%;
+  font-size: 0.98em;
+}
+@media (max-width: 900px) {
+  .review-list {
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+  }
+  .review {
+    max-width: 98vw;
+    min-width: 0;
+    width: 100%;
+    margin: 0 auto;
+    min-height: 320px;
+  }
+  .review-photo {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .faq {
   background: #fff;
@@ -940,9 +1001,55 @@ footer {
   opacity: 1;
 }
 /* Accessibility contrast improvements */
-.price-box span[style*="text-decoration:line-through"],
-.price-box .compare-at {
-  color: #444 !important;
+/* Enhanced price appearance */
+.price-box {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 0.7em;
+  background: #e6fcf8;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #00c3ad11;
+  padding: 0.7em 1.2em 0.7em 1.2em;
+  margin: 1em 0 0.5em 0;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+.price-box span {
+  display: inline-block;
+}
+.price-box .main-price,
+.price-box span[style*="font-size:1.5em"] {
+  font-size: 2em !important;
+  font-weight: 900 !important;
+  color: #000000 !important;
+  letter-spacing: 0.01em;
+  text-shadow: 0 2px 12px #00c3ad22;
+  margin-right: 0.2em;
+}
+.price-box .compare-at,
+.price-box span[style*="text-decoration:line-through"] {
+  color: #ff0000 !important;
+  font-size: 1.15em !important;
+  text-decoration: line-through;
+  font-weight: 700;
+  opacity: 0.7;
+  margin-left: 0.5em;
+  margin-bottom: 0.1em;
+}
+.price-box .save-badge {
+  background: #ff0000;
+  color: #fff;
+  font-size: 0.98em;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 0.1em 0.7em;
+  margin-left: 0.7em;
+  letter-spacing: 0.01em;
+  vertical-align: middle;
+  box-shadow: 0 2px 8px #ffb30022;
 }
 .faq-question {
   color: #00897b;

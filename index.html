@@ -5,7 +5,7 @@
   <!-- Floating Trust Badge -->
   <div class="trust-badge">
     <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;margin-right:6px;"><circle cx="11" cy="11" r="11" fill="#00c3ad"/><path d="M7.5 11.5L10 14L15 9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    Paiement à la livraison garanti
+    Paiement à la livraison gratuite
   </div>
   <!-- Sticky Order Bar (Mobile) -->
   <div class="sticky-order-bar">
@@ -50,7 +50,7 @@
     </div>
     <!-- Comparison Table moved below video section -->
     <div style="text-align:center;margin:1.5em 0;">
-      <button class="scroll-to-order" type="button" aria-label="Retourner au formulaire de commande" onclick="document.querySelector('.order-form-section').scrollIntoView({behavior: 'smooth'});">Commander maintenant ↑</button>
+      <button class="scroll-to-order" type="button" aria-label="Retourner au formulaire de commande" onclick="document.querySelector('.order-form-section').scrollIntoView({behavior: 'smooth'});">Commander maintenant</button>
     </div>
   </section>
   <div class="section-divider"></div>
@@ -85,7 +85,8 @@
       </div>
     </div>
     <div style="text-align:center;margin:1.5em 0;">
-      <button class="scroll-to-order" type="button" aria-label="Retourner au formulaire de commande" onclick="document.querySelector('.order-form-section').scrollIntoView({behavior: 'smooth'});">Commander maintenant ↑</button>
+      <button class="scroll-to-order" type="button" aria-label="Retourner au formulaire de commande" onclick="document.querySelector('.order-form-section').scrollIntoView({behavior: 'smooth'});">Commander maintenant</button>
+      <div class="free-shipping" style="color:#00897b;font-weight:700;font-size:1.08em;margin-top:0.7em;letter-spacing:0.01em;">Livraison Gratuite</div>
     </div>
   </section>
   <div class="section-divider"></div>
@@ -179,29 +180,29 @@ function toggleAboutDetail(el) {
     <h2><span class="highlight">Avis</span> de nos clients</h2>
     <div class="review-list">
       <div class="review">
+        <img src="images/Reviews/1.jpg" alt="Photo client Yassine" class="review-photo" style="width:110px;height:110px;max-width:none;max-height:none;object-fit:cover;border-radius:16px;box-shadow:0 2px 12px #0001;">
         <div class="review-header">
           <span class="star-rating">★★★★★</span>
-          <span class="verified-badge" title="Acheteur vérifié">✔️ Acheteur vérifié</span>
+          <span class="verified-badge" title="Acheteur vérifié">Vérifié</span>
         </div>
-        <img src="images/Reviews/1.jpg" alt="Photo client Yassine" class="review-photo" style="width:64px;height:64px;object-fit:cover;border-radius:50%;margin-bottom:8px;box-shadow:0 2px 8px #0002;">
         <p><b>Livraison rapide</b>, lunettes très confortables !</p>
         <span>- Yassine, Casablanca <img src="https://flagcdn.com/16x12/ma.png" alt="MA" width="16" height="12"></span>
       </div>
       <div class="review">
+        <img src="images/Reviews/2.jpg" alt="Photo client Salma" class="review-photo" style="width:110px;height:110px;max-width:none;max-height:none;object-fit:cover;border-radius:16px;box-shadow:0 2px 12px #0001;">
         <div class="review-header">
           <span class="star-rating">★★★★★</span>
-          <span class="verified-badge" title="Acheteur vérifié">✔️ Acheteur vérifié</span>
+          <span class="verified-badge" title="Acheteur vérifié">Vérifié</span>
         </div>
-        <img src="images/Reviews/2.jpg" alt="Photo client Salma" class="review-photo" style="width:64px;height:64px;object-fit:cover;border-radius:50%;margin-bottom:8px;box-shadow:0 2px 8px #0002;">
         <p><b>Style</b> et <b>protection contre la lumière bleue</b> au top.</p>
         <span>- Salma, Rabat <img src="https://flagcdn.com/16x12/ma.png" alt="MA" width="16" height="12"></span>
       </div>
       <div class="review">
+        <img src="images/Reviews/3.jpg" alt="Photo client Imane" class="review-photo" style="width:110px;height:110px;max-width:none;max-height:none;object-fit:cover;border-radius:16px;box-shadow:0 2px 12px #0001;">
         <div class="review-header">
           <span class="star-rating">★★★★★</span>
-          <span class="verified-badge" title="Acheteur vérifié">✔️ Acheteur vérifié</span>
+          <span class="verified-badge" title="Acheteur vérifié">Vérifié</span>
         </div>
-        <img src="images/Reviews/3.jpg" alt="Photo client Imane" class="review-photo" style="width:64px;height:64px;object-fit:cover;border-radius:50%;margin-bottom:8px;box-shadow:0 2px 8px #0002;">
         <p><b>Service client</b> au top, <b>je recommande</b> !</p>
         <span>- Imane, Marrakech <img src="https://flagcdn.com/16x12/ma.png" alt="MA" width="16" height="12"></span>
       </div>
@@ -213,41 +214,76 @@ function toggleAboutDetail(el) {
   <div class="section-divider"></div>
   <section class="order-form-section">
     <form class="cod-form">
-      <label for="variant">Choisissez votre modèle :</label>
-      <div class="variant-toggle">
-        <input type="radio" id="sunglasses" name="variant" value="sunglasses" checked>
-        <label for="sunglasses">Solaire</label>
-        <input type="radio" id="anti-blue" name="variant" value="anti-blue">
-        <label for="anti-blue">Anti-Bleue</label>
-      </div>
-      <div id="stock-indicator" aria-live="polite"></div>
-      <div class="variant-images">
-        <div id="grid-sunglasses" class="variant-grid fade-in" style="display:grid;grid-template-columns:1fr 1fr;gap:0.5em;max-width:240px;margin:0 auto 0.7em auto;justify-items:center;align-items:center;">
-          <img src="images/Sunglasses/s-l1600.webp" alt="Solaire 1" style="width:100%;border-radius:10px;" width="240" height="240" loading="lazy">
-          <img src="images/Sunglasses/s-l1600 (1).webp" alt="Solaire 2" style="width:100%;border-radius:10px;" width="240" height="240" loading="lazy">
-          <img src="images/Sunglasses/s-l1600 (2).webp" alt="Solaire 3" style="width:100%;border-radius:10px;" width="240" height="240" loading="lazy">
-          <img src="images/Sunglasses/s-l1600 (3).webp" alt="Solaire 4" style="width:100%;border-radius:10px;" width="240" height="240" loading="lazy">
-        </div>
-        <div id="grid-anti-blue" class="variant-grid fade-in" style="display:none;grid-template-columns:1fr 1fr;gap:0.5em;max-width:240px;margin:0 auto 0.7em auto;">
-          <img src="images/Anti-Blue/81894808-0b55-4c26-b363-1223be921386.webp" alt="Anti-lumière bleue 1" style="width:100%;border-radius:10px;" width="240" height="240" loading="lazy">
-          <img src="images/Anti-Blue/9157749d-4ea9-4245-9e98-acac79dc96d1.webp" alt="Anti-lumière bleue 2" style="width:100%;border-radius:10px;" width="240" height="240" loading="lazy">
-          <img src="images/Anti-Blue/b8b53393-2fbc-4554-b582-c8c83edfb780.webp" alt="Anti-lumière bleue 3" style="width:100%;border-radius:10px;" width="240" height="240" loading="lazy">
-          <img src="images/Anti-Blue/e987bee7-43d8-4980-9382-42a85c85de72.webp" alt="Anti-lumière bleue 4" style="width:100%;border-radius:10px;" width="240" height="240" loading="lazy">
-        </div>
-      <div class="price-box" style="margin:1em 0 0.5em 0;text-align:center;">
-        <span style="font-size:1.5em;font-weight:700;color:#00c3ad;">249 Dh</span>
-        <span class="compare-at" style="font-size:1.1em;text-decoration:line-through;margin-left:0.7em;">399 Dh</span>
-        <div class="free-shipping" style="color:#00897b;font-weight:700;font-size:1.08em;margin-top:0.3em;letter-spacing:0.01em;">🚚 Livraison Gratuite</div>
-      </div>
-      </div>
       <label for="name">Nom complet</label>
       <input type="text" id="name" name="name" placeholder="Votre nom" required>
       <label for="phone">Téléphone</label>
       <input type="tel" id="phone" name="phone" placeholder="Votre téléphone" required pattern="[0-9]{10}">
       <label for="address">Ville</label>
       <input type="text" id="address" name="address" placeholder="Ville" required>
-      <button type="submit" aria-label="Commander maintenant - Envoyer la commande">Commander</button>
-      <button class="scroll-to-reviews" type="button" aria-label="Voir les avis clients" onclick="document.getElementById('reviews').scrollIntoView({behavior: 'smooth'});">Voir les avis clients ↓</button>
+      <label for="variant-select">Modèle <span style="color:red">*</span></label>
+      <div class="custom-select-wrapper" style="position:relative;max-width:320px;margin-bottom:1em;">
+        <select id="variant-select" name="variant" required style="width:100%;padding:1em 2.7em 1em 1.1em;border-radius:12px;border:2px solid #00c3ad;background:#fff;color:#111;font-size:1.13em;font-weight:600;appearance:none;-webkit-appearance:none;-moz-appearance:none;box-shadow:0 4px 18px #00c3ad18, 0 2px 8px #00c3ad11;outline:none;transition:border 0.22s,box-shadow 0.22s;cursor:pointer;letter-spacing:0.01em;">
+          <option value="" disabled selected hidden>Choisissez un modèle</option>
+          <option value="sunglasses">Solaire</option>
+          <option value="anti-blue">Anti-Bleue</option>
+        </select>
+        <span style="position:absolute;right:1em;top:50%;transform:translateY(-50%);pointer-events:none;font-size:1.2em;color:#00c3ad;">▼</span>
+        <style>
+        /* Custom dropdown focus/hover */
+        #variant-select:focus, #variant-select:hover {
+          border-color: #009e8e !important;
+          box-shadow: 0 0 0 3px #00c3ad33, 0 4px 18px #00c3ad18;
+        }
+        #variant-select option {
+          color: #111;
+          background: #fff;
+          font-weight: 600;
+        }
+        #variant-select option:disabled {
+          color: #aaa;
+        }
+        .custom-select-wrapper:after {
+          content: '';
+          display: block;
+          position: absolute;
+          right: 1.2em;
+          top: 50%;
+          width: 1.2em;
+          height: 1.2em;
+          pointer-events: none;
+          background: url('data:image/svg+xml;utf8,<svg fill="%2300c3ad" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat center/contain;
+          transform: translateY(-50%);
+        }
+        .custom-select-wrapper span {
+          display: none !important;
+        }
+        </style>
+      </div>
+      <div id="variant-images-wrapper">
+        <div id="grid-sunglasses" class="variant-grid fade-in" style="display:none;grid-template-columns:1fr 1fr;gap:0.5em;max-width:240px;margin:0 auto 0.7em auto;justify-items:center;align-items:center;">
+          <img src="images/Sunglasses/s-l1600.webp" alt="Solaire 1" style="width:100%;border-radius:10px;" width="240" height="240" loading="lazy">
+          <img src="images/Sunglasses/s-l1600 (1).webp" alt="Solaire 2" style="width:100%;border-radius:10px;" width="240" height="240" loading="lazy">
+          <img src="images/Sunglasses/s-l1600 (2).webp" alt="Solaire 3" style="width:100%;border-radius:10px;" width="240" height="240" loading="lazy">
+          <img src="images/Sunglasses/s-l1600 (3).webp" alt="Solaire 4" style="width:100%;border-radius:10px;" width="240" height="240" loading="lazy">
+        </div>
+        <div id="grid-anti-blue" class="variant-grid fade-in" style="display:none;grid-template-columns:1fr 1fr;gap:0.5em;max-width:240px;margin:0 auto 0.7em auto;">
+        <div id="antiblue-stock" style="display:none;text-align:center;width:100%;grid-column:1/-1;margin-bottom:0.7em;">
+          <span style="display:inline-block;background:#fff1f1;color:#d60000;font-weight:700;font-size:1.08em;padding:0.32em 1.1em;border-radius:8px;border:1.5px solid #d60000;box-shadow:0 2px 8px #d6000022;letter-spacing:0.01em;">4 restants</span>
+        </div>
+          <img src="images/Anti-Blue/81894808-0b55-4c26-b363-1223be921386.webp" alt="Anti-lumière bleue 1" style="width:100%;border-radius:10px;" width="240" height="240" loading="lazy">
+          <img src="images/Anti-Blue/9157749d-4ea9-4245-9e98-acac79dc96d1.webp" alt="Anti-lumière bleue 2" style="width:100%;border-radius:10px;" width="240" height="240" loading="lazy">
+          <img src="images/Anti-Blue/b8b53393-2fbc-4554-b582-c8c83edfb780.webp" alt="Anti-lumière bleue 3" style="width:100%;border-radius:10px;" width="240" height="240" loading="lazy">
+          <img src="images/Anti-Blue/e987bee7-43d8-4980-9382-42a85c85de72.webp" alt="Anti-lumière bleue 4" style="width:100%;border-radius:10px;" width="240" height="240" loading="lazy">
+        </div>
+        <div class="price-box" style="margin:1em 0 0.5em 0;text-align:center;">
+          <span class="main-price">249 Dh</span>
+          <span class="compare-at">399 Dh</span>
+          <span class="save-badge">-38%</span>
+          <!-- Livraison Gratuite removed from here -->
+        </div>
+      </div>
+      <button id="commander-btn" type="submit" aria-label="Commander maintenant - Envoyer la commande" style="width:100%;background:#00c3ad;color:#111;font-weight:700;font-size:1.18em;padding:1em 0;border:none;border-radius:30px;box-shadow:0 4px 24px #00c3ad33;cursor:pointer;transition:background 0.2s,transform 0.1s;letter-spacing:0.03em;margin-top:0.5em;margin-bottom:0.5em;outline:none;">Commander</button>
+      <button class="scroll-to-reviews" type="button" aria-label="Voir les avis clients" onclick="document.getElementById('reviews').scrollIntoView({behavior: 'smooth'});">Voir les avis clients</button>
       <div class="secure-order"><span>✔</span> Commande 100% sécurisée</div>
     </form>
   </section>
@@ -316,5 +352,68 @@ function toggleAboutDetail(el) {
   </footer>
 
   <script src="script.js"></script>
+  <script>
+// Variant dropdown logic
+const variantSelect = document.getElementById('variant-select');
+const gridSunglasses = document.getElementById('grid-sunglasses');
+const gridAntiBlue = document.getElementById('grid-anti-blue');
+const antiblueStock = document.getElementById('antiblue-stock');
+if (variantSelect && gridSunglasses && gridAntiBlue) {
+  variantSelect.addEventListener('change', function() {
+    if (this.value === 'sunglasses') {
+      gridSunglasses.style.display = 'grid';
+      gridAntiBlue.style.display = 'none';
+      if (antiblueStock) antiblueStock.style.display = 'none';
+    } else if (this.value === 'anti-blue') {
+      gridSunglasses.style.display = 'none';
+      gridAntiBlue.style.display = 'grid';
+      if (antiblueStock) antiblueStock.style.display = 'block';
+    } else {
+      gridSunglasses.style.display = 'none';
+      gridAntiBlue.style.display = 'none';
+      if (antiblueStock) antiblueStock.style.display = 'none';
+    }
+  });
+}
+// Show images for default selected (if any)
+window.addEventListener('DOMContentLoaded', function() {
+  if (variantSelect.value === 'sunglasses') {
+    gridSunglasses.style.display = 'grid';
+    gridAntiBlue.style.display = 'none';
+    if (antiblueStock) antiblueStock.style.display = 'none';
+  } else if (variantSelect.value === 'anti-blue') {
+    gridSunglasses.style.display = 'none';
+    gridAntiBlue.style.display = 'grid';
+    if (antiblueStock) antiblueStock.style.display = 'block';
+  } else {
+    gridSunglasses.style.display = 'none';
+    gridAntiBlue.style.display = 'none';
+    if (antiblueStock) antiblueStock.style.display = 'none';
+  }
+
+  // Add Commander button hover/active color logic
+  const commanderBtn = document.getElementById('commander-btn');
+  if (commanderBtn) {
+    commanderBtn.addEventListener('mouseenter', function() {
+      this.style.background = '#00b09b';
+    });
+    commanderBtn.addEventListener('mouseleave', function() {
+      this.style.background = '#00c3ad';
+    });
+    commanderBtn.addEventListener('mousedown', function() {
+      this.style.background = '#009e8e';
+    });
+    commanderBtn.addEventListener('mouseup', function() {
+      this.style.background = '#00b09b';
+    });
+    commanderBtn.addEventListener('focus', function() {
+      this.style.background = '#00b09b';
+    });
+    commanderBtn.addEventListener('blur', function() {
+      this.style.background = '#00c3ad';
+    });
+  }
+});
+  </script>
 </body>
 </html>
